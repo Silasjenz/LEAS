@@ -1,0 +1,44 @@
+% !TEX program = pdflatex
+% Laborbericht LEAS – Wechselrichter einphasig
+% Bauen: Ctrl+Alt+B (LaTeX Workshop) oder  latexmk main.tex  (siehe README.md)
+\documentclass[a4paper,11pt]{scrartcl}
+\input{preamble}
+
+\begin{document}
+
+% ---------------------------------------------------------------- Titelblatt
+\begin{titlepage}
+  \centering
+  \vspace*{1.5cm}
+  {\large Hochschule Luzern – Technik \& Architektur\par}
+  {\large Modul LEAS\par}
+  \vspace{2.5cm}
+  {\Huge\bfseries Wechselrichter einphasig\par}
+  \vspace{0.8cm}
+  {\Large Laborbericht\par}
+  \vspace{2.5cm}
+  \begin{tabular}{@{}ll@{}}
+    Autor(en):      & [Name(n) eintragen] \\[2pt]
+    Gruppe/Partner: & [Gruppe bzw. Partner eintragen] \\[2pt]
+    Dozent:         & [Dozent eintragen] \\[2pt]
+    Messtage:       & 13.11.2026 und 20.11.2026 \\[2pt]
+    Abgabe:         & [Datum eintragen]
+  \end{tabular}
+  \vfill
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+\listoftodos[Offene Punkte]
+\clearpage
+
+% ---------------------------------------------------------------- Kapitel
+\input{sections/01_einleitung}
+\input{sections/02_aufbau}
+\input{sections/03_theorie}
+\input{sections/04_vorbereitung}
+\input{sections/05_messungen}
+\input{sections/06_diskussion}
+\input{sections/07_fazit}
+
+\end{document}

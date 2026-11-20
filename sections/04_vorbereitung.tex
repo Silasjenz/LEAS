@@ -1,0 +1,62 @@
+% !TEX root = ../main.tex
+\section{Vorbereitung (Aufgabe 5)}
+\label{sec:vorbereitung}
+
+\subsection{Stromverlauf bei Grundfrequenztaktung}
+
+Verlangt ist die Skizze des Stromverlaufs bei Grundfrequenztaktung unter der Annahme, dass die Grundschwingung der Wechselrichterspannung mit der Netzspannung übereinstimmt ($U_{\mathrm{WR1}}=\UN$, $\Th=0$). Die Spannung über der Induktivität ist dann $\uWR-\uN$, und es gilt $L\,\mathrm{d}i/\mathrm{d}t=\uWR-\uN$. Für die erste Halbperiode $0\le\omega t\le\pi$ mit $\uWR=+\Udc$ und $\uN=\hat U_{\mathrm N}\sin\omega t$ folgt durch Integration
+\begin{equation}
+  i(\omega t)=\frac{1}{X}\Bigl[\Udc\bigl(\omega t-\tfrac{\pi}{2}\bigr)+\hat U_{\mathrm N}\cos\omega t\Bigr],
+  \qquad i(\omega t+\pi)=-i(\omega t).
+  \label{eq:strom_vorb}
+\end{equation}
+Die Integrationskonstante ist so gewählt, dass der Strom mittelwertfrei ist. Mit $\hat U_{\mathrm N}=\sqrt2\cdot\SI{230}{\volt}=\SI{325.3}{\volt}$, $\Udc=\tfrac{\pi}{4}\hat U_{\mathrm N}=\SI{255.5}{\volt}$ und $X=\SI{22.0}{\ohm}$ ergibt sich der Verlauf in Abbildung~\ref{fig:strom_vorb} mit einem Scheitelwert von etwa \SI{3.5}{\ampere}. Der Strom besteht nur aus Oberschwingungen; seine Form entspricht dem Integral von «Rechteck minus Sinus».
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[rep,height=4.6cm,xlabel={$\omega t$ in \si{\degree}},ylabel={$u$ in V},
+        xmin=0,xmax=360,xtick={0,90,...,360},ymin=-400,ymax=400,
+        legend style={at={(0.5,1.04)},anchor=south,legend columns=2,font=\small}]
+      \addplot[thick,domain=0:360,samples=721]{ifthenelse(x<180,255.46,-255.46)};
+      \addlegendentry{$\uWR$ (Rechteck)}
+      \addplot[thick,dashed,domain=0:360,samples=361]{325.27*sin(x)};
+      \addlegendentry{$\uN$}
+    \end{axis}
+  \end{tikzpicture}
+
+  \begin{tikzpicture}
+    \begin{axis}[rep,height=4.6cm,xlabel={$\omega t$ in \si{\degree}},ylabel={$i$ in A},
+        xmin=0,xmax=360,xtick={0,90,...,360},ymin=-5,ymax=5]
+      \addplot[thick,domain=0:360,samples=721]{ifthenelse(x<180,(255.46*(x*pi/180-pi/2)+325.27*cos(x))/21.99,-(255.46*((x-180)*pi/180-pi/2)+325.27*cos(x-180))/21.99)};
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Berechnete Spannungen (oben) und Strom (unten) bei Grundfrequenztaktung mit $U_{\mathrm{WR1}}=\UN$ und $\Th=0$, nach \eqref{eq:strom_vorb}.}
+  \label{fig:strom_vorb}
+\end{figure}
+
+\subsection{Beeinflussung von Wirk- und Blindleistung}
+
+Abbildung~\ref{fig:zeiger} zeigt das Zeigerdiagramm mit dem Spannungsabfall $\Delta\underline U=\underline U_{\mathrm N}-\underline U_{\mathrm{WR1}}=\mathrm{j}X\underline I$ an der Kopplungsinduktivität; der Strom eilt $\Delta\underline U$ um \SI{90}{\degree} nach. Die Leistungen folgen aus \eqref{eq:PQ}:
+
+\begin{itemize}
+  \item Die \emph{Wirkleistung} wird über den Winkel $\Th$ zwischen $\underline U_{\mathrm{WR1}}$ und $\underline U_{\mathrm N}$ eingestellt, $P\propto\sin\Th$. Am Bedienfeld geschieht dies mit den Tasten für $\Th$.
+  \item Die \emph{Blindleistung} wird über die Amplitude $U_{\mathrm{WR1}}$ eingestellt. Bei fester Pulsform ist $U_{\mathrm{WR1}}\propto\Udc$, am Versuch also über den Erregerstrom der GM. Ist $U_{\mathrm{WR1}}\cos\Th<\UN$, bezieht der Wechselrichter induktive Blindleistung aus dem Netz (untererregt); ist $U_{\mathrm{WR1}}\cos\Th>\UN$, liefert er induktive Blindleistung ans Netz (übererregt).
+\end{itemize}
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[>={Stealth[length=2.5mm]},scale=1.15]
+    \coordinate (O) at (0,0);
+    \coordinate (UN) at (4,0);
+    \coordinate (UW) at (-25:3.6);
+    \draw[->,thick] (O) -- (UN) node[right] {$\underline U_{\mathrm N}$};
+    \draw[->,thick] (O) -- (UW) node[below right] {$\underline U_{\mathrm{WR1}}$};
+    \draw[->,thick,dashed] (UW) -- (UN) node[midway,right,xshift=2pt] {$\Delta\underline U=\mathrm{j}X\underline I$};
+    \draw[->,thick] (O) -- (1.5,-0.72) node[below right,xshift=-2pt] {$\underline I$};
+    \draw (1.0,0) arc (0:-25:1.0);
+    \node at (1.35,-0.2) {$\Th$};
+  \end{tikzpicture}
+  \caption{Zeigerdiagramm des einphasigen Wechselrichters am Netz bei $P>0$ (Bezug aus dem Netz); die Länge von $\underline I$ ist nicht massstäblich.}
+  \label{fig:zeiger}
+\end{figure}

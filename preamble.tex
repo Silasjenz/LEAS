@@ -1,0 +1,42 @@
+% Pakete und Einstellungen – wird von main.tex eingebunden
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+% Offene Punkte als sichtbare Boxen. Vor der Abgabe:  [disable]  statt [textsize=footnotesize]
+\usepackage[textsize=footnotesize]{todonotes}
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{img/}}
+\captionsetup{font=small,labelfont=bf}
+
+% Dezimalpunkt (Schweizer Schreibweise), Einheiten
+\sisetup{output-decimal-marker={.},per-mode=symbol}
+\DeclareSIUnit{\VAr}{var}
+
+% Abkürzungen für Formelzeichen
+\newcommand{\Udc}{U_{\mathrm{dc}}}
+\newcommand{\UN}{U_{\mathrm{N}}}
+\newcommand{\UWR}{U_{\mathrm{WR}}}
+\newcommand{\uN}{u_{\mathrm{N}}}
+\newcommand{\uWR}{u_{\mathrm{WR}}}
+\newcommand{\iN}{i_{\mathrm{N}}}
+\newcommand{\Th}{\vartheta}
+
+% Gemeinsamer Stil für Diagramme
+\pgfplotsset{
+  rep/.style={width=0.92\linewidth,height=6.2cm,grid=major,
+    tick label style={font=\small},label style={font=\small},
+    legend style={font=\small},unbounded coords=jump}
+}

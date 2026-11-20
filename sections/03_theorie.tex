@@ -1,0 +1,61 @@
+% !TEX root = ../main.tex
+\section{Theorie}
+\label{sec:theorie}
+
+\subsection{Wirk- und Blindleistung}
+
+Die Kopplungsinduktivität verbindet zwei Spannungsquellen: den Wechselrichter mit der Grundschwingung $\underline{U}_{\mathrm{WR1}}$ und das Netz mit $\underline{U}_{\mathrm N}$. Die Spannung $\underline{U}_{\mathrm N}$ wird als Bezugszeiger gewählt, $\underline{U}_{\mathrm{WR1}}$ eilt um den Winkel $\Th$ nach. Bei vernachlässigtem Widerstand fliesst der Strom
+\begin{equation}
+  \underline{I} = \frac{\underline{U}_{\mathrm N}-\underline{U}_{\mathrm{WR1}}}{\mathrm{j}X},
+  \qquad \underline{U}_{\mathrm{WR1}} = U_{\mathrm{WR1}}\,\mathrm{e}^{-\mathrm{j}\Th},
+  \qquad X=\omega L .
+\end{equation}
+Mit $\underline{S}=\underline{U}_{\mathrm N}\,\underline{I}^{*}=P+\mathrm{j}Q$ (Bezugssinn aus Sicht des Netzes, passend zur Konvention in Abschnitt~\ref{sec:vorzeichen}) folgt
+\begin{equation}
+  P=\frac{\UN\,U_{\mathrm{WR1}}\,\sin\Th}{X},
+  \qquad
+  Q=\frac{\UN\,\bigl(\UN-U_{\mathrm{WR1}}\cos\Th\bigr)}{X}.
+  \label{eq:PQ}
+\end{equation}
+Die Wirkleistung wird also hauptsächlich über den Winkel $\Th$ eingestellt, die Blindleistung hauptsächlich über die Amplitude $U_{\mathrm{WR1}}$ und damit über $\Udc$. Das Verhalten entspricht dem Zeigerdiagramm einer Synchronmaschine am Netz, wobei $U_{\mathrm{WR1}}$ der Polradspannung entspricht. Die Blindleistung der Grundschwingung wird null für $U_{\mathrm{WR1}}\cos\Th=\UN$.
+
+\subsection{Spannungs- und Stromoberschwingungen bei Grundfrequenztaktung}
+
+Bei Grundfrequenztaktung ist $\uWR$ eine Rechteckspannung mit den Amplituden $\pm\Udc$. Die Fourier-Zerlegung enthält nur ungerade Ordnungen $n$:
+\begin{equation}
+  \uWR(t)=\frac{4\,\Udc}{\pi}\sum_{n=1,3,5,\dots}\frac{1}{n}\sin(n\omega t),
+  \qquad
+  U_{\mathrm{WR},n}=\frac{4}{\pi\sqrt2}\,\frac{\Udc}{n}\approx 0.9\,\frac{\Udc}{n}.
+  \label{eq:rechteck}
+\end{equation}
+Die Netzspannung wird als sinusförmig angenommen, deshalb treiben nur die Oberschwingungen von $\uWR$ Oberschwingungsströme durch die Induktivität:
+\begin{equation}
+  I_n=\frac{U_{\mathrm{WR},n}}{n\,X}.
+  \label{eq:In}
+\end{equation}
+Die Stromoberschwingungen fallen deshalb mit $1/n^2$ ab. Mit $L=\SI{70}{\milli\henry}$ ist $X=2\pi\cdot\SI{50}{\hertz}\cdot\SI{70}{\milli\henry}=\SI{22.0}{\ohm}$. Für $\Udc=\SI{259}{\volt}$ ergeben sich die Werte in Tabelle~\ref{tab:theorie_harm}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Erwartete Oberschwingungen bei Grundfrequenztaktung, $\Udc=\SI{259}{\volt}$, $X=\SI{22}{\ohm}$ (berechnet nach \eqref{eq:rechteck} und \eqref{eq:In}).}
+  \label{tab:theorie_harm}
+  \begin{tabular}{@{}lrrrr@{}}
+    \toprule
+    Ordnung $n$ & 1 & 3 & 5 & 7 \\
+    \midrule
+    $U_{\mathrm{WR},n}$ in V & 233.1 & 77.7 & 46.6 & 33.3 \\
+    $U_{\mathrm{WR},n}/U_{\mathrm{WR},1}$ & 1 & 1/3 & 1/5 & 1/7 \\
+    $I_n$ in A & -- & 1.18 & 0.42 & 0.22 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Ist $U_{\mathrm{WR1}}=\UN$ und $\Th=0$, so verschwindet der Grundschwingungsstrom ($I_1\approx0$), und der Strom besteht nur aus Oberschwingungen.
+
+\subsection{Leistungsgrössen mit Oberschwingungen}
+
+Die Wirkleistung $P$ ist der Mittelwert von $u\cdot i$ über alle Frequenzen, $P_1=U_1 I_1\cos\varphi_1$ gehört zur Grundschwingung (Index 1). Da die Netzspannung nahezu sinusförmig ist, gilt $P\approx P_1$. Der PM\,3000 bildet $Q=\sqrt{S^2-P^2}$; diese Grösse enthält die Verzerrungsblindleistung und wird deshalb nie null. Erst die Grundschwingungsblindleistung $Q_1=\pm\sqrt{(U_1I_1)^2-P_1^2}$ kann durch null gehen. Der Phasenwinkel der 1.\ Harmonischen ist am PM\,3000 immer $\SI{0}{\degree}$, weil er auf die eigene Grundschwingung bezogen ist, und eignet sich deshalb nicht zur Bestimmung von $Q_1$. Bei festem $P$ liegt $Q_1=0$ dort, wo $I_1$ minimal wird. Der Leistungsfaktor $\lambda=P/S$ ist wegen der Oberschwingungen kleiner als $\cos\varphi_1$.
+
+\subsection{Pulsmuster}
+
+Bei Pulsmustern mit eliminierten Oberschwingungen werden Kerben an berechneten Winkeln gesetzt, die gezielt einzelne Ordnungen aus $\uWR$ entfernen. Beim Trägerverfahren folgt die Pulsbreite einem sinusförmigen Sollwert, die Oberschwingungen liegen dann um die Schaltfrequenz. Beide Verfahren verkleinern die Grundschwingung $U_{\mathrm{WR1}}$ pro Volt $\Udc$ gegenüber dem Rechteck; für denselben Lastpunkt ist deshalb eine höhere Zwischenkreisspannung nötig. Eine höhere Schaltfrequenz verschiebt die Oberschwingungen zu höheren Ordnungen, wo die Induktivität stärker dämpft, bedeutet aber mehr Schaltverluste und mehr EMV-Störungen (qualitative Aussage, nicht gemessen).

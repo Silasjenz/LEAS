@@ -1,0 +1,89 @@
+% !TEX root = ../main.tex
+\section{Versuchsaufbau und Messung}
+\label{sec:aufbau}
+
+\subsection{Leistungskreis}
+
+Der Aufbau war fertig verkabelt (Abbildung~\ref{fig:blockschaltbild}). Die Asynchronmaschine (ASM) wird aus dem Netz~1 gespeist und treibt über die gemeinsame Welle die Gleichstrommaschine (GM). Der Anker der GM liegt am Zwischenkreis des einphasigen Wechselrichters (WR). Die Zwischenkreisspannung $\Udc$ wird über den Erregerstrom der GM (Klemmen F1/F2) eingestellt, die Drehzahl wird von der ASM praktisch konstant gehalten. Der Wechselrichterausgang ist über die Kopplungsinduktivität und einen Trenntransformator mit dem Netz~2 verbunden.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+      blk/.style={draw,rectangle,minimum height=1.1cm,minimum width=1.4cm,align=center,font=\footnotesize},
+      >={Stealth[length=2mm]},node distance=0.8cm]
+    \node[blk] (n1) {Netz 1\\ $3\times\SI{400}{\volt}$};
+    \node[blk,right=of n1] (asm) {ASM\\ \SI{5.5}{\kilo\watt}};
+    \node[blk,right=of asm] (gm) {GM\\ \SI{6}{\kilo\watt}};
+    \node[blk,right=of gm] (wr) {WR\\ IGBT-\\ Vollbrücke};
+    \node[blk,right=of wr] (l) {$L$\\ \SI{70}{\milli\henry}};
+    \node[blk,right=of l] (tr) {Trafo\\ $400/230$\,V};
+    \node[blk,right=of tr] (n2) {Netz 2\\ \SI{230}{\volt}};
+    \node[blk,below=0.8cm of gm] (err) {Erregung\\ F1/F2};
+    \draw (n1) -- (asm);
+    \draw[double distance=1.5pt] (asm) -- (gm);
+    \draw (gm) -- (wr);
+    \draw (wr) -- (l);
+    \draw (l) -- (tr);
+    \draw (tr) -- (n2);
+    \draw[->] (err) -- (gm);
+    \node[font=\scriptsize,above] at ($(gm.east)!0.5!(wr.west)$) {$\Udc$};
+    \node[font=\scriptsize,above] at ($(wr.east)!0.5!(l.west)$) {$\uWR$};
+    \node[font=\scriptsize,above] at ($(tr.east)!0.5!(n2.west)$) {$\uN$};
+  \end{tikzpicture}
+  \caption{Blockschaltbild des Versuchsaufbaus. Die Welle zwischen ASM und GM ist doppelt dargestellt; $\Udc$ wird über den Erregerstrom der GM eingestellt.}
+  \label{fig:blockschaltbild}
+\end{figure}
+
+Der Wechselrichter ist ein synchronisierbarer Einphasenwechselrichter mit IGBT-Vollbrücke und antiparallelen Dioden, geteiltem Zwischenkreiskondensator (Mittelpunkt M.P.) und einem antiparallelen Koppelschalter auf der AC-Seite. Er hängt auf der \SI{230}{\volt}-Seite des Trenntransformators; bei einer Zwischenkreisspannung von $\Udc=\SI{259}{\volt}$ wurde eine Grundschwingung der Wechselrichterspannung von $U_1\approx\SI{233}{\volt}$ gemessen (Abschnitt~\ref{sec:messung611}).
+
+Am Bedienfeld lassen sich der Winkel $\Th$ zwischen Wechselrichter- und Netzspannung (Tasten $\leftarrow$ $\rightarrow$), die Gleichspannung (Tasten $\uparrow$ $\downarrow$, wirkt auf die GM-Erregung), das Impulsmuster, die Synchronisation und das Koppeln bzw.\ Entkoppeln bedienen. Fehleranzeigen (Überstrom, IGBT, Steuerung) sind ebenfalls vorhanden. Zur Verfügung stehen folgende Pulsmuster:
+
+\begin{itemize}
+  \item geschlossene Rechteckschwingung (Grundfrequenztaktung),
+  \item 3.\ bis 5.\ Oberschwingung eliminiert,
+  \item 3.\ bis 9.\ Oberschwingung eliminiert,
+  \item 3.\ bis 21.\ Oberschwingung eliminiert,
+  \item Trägerverfahren (sinusbewertet) fein,
+  \item Trägerverfahren (sinusbewertet) grob.
+\end{itemize}
+
+\subsection{Geräte}
+
+\begin{itemize}
+  \item Einphasiger Wechselrichter mit Ansteuerung (mit dem Netz synchronisierbar),
+  \item Entkopplungsinduktivität \SI{70}{\milli\henry}, \SI{30}{\ampere}; bei \SI{50}{\hertz} ist $X=\omega L\approx\SI{22}{\ohm}$,
+  \item Einphasentransformator $400/230$\,V, \SI{25}{\ampere},
+  \item Gleichstrommaschine \SI{6}{\kilo\watt}, \SI{500}{\volt},
+  \item Asynchronmaschine \SI{5.5}{\kilo\watt}, $3\times\SI{400}{\volt}$,
+  \item Voltech Power-Analyzer PM\,3000 mit Spannungswahlschalter (Stellung «Netz»: $\uN$, Stellung «WR»: $\uWR$; der Strom ist immer $\iN$),
+  \item Vierkanal-Oszilloskop Tektronix TPS2014 (isolierte Kanäle) mit Stromzange und Spannungs-Mess-Trennverstärkern,
+  \item Multimeter Metra Hit 18S (Messung von $\Udc$),
+  \item optischer Drehzahlmesser.
+\end{itemize}
+
+\subsection{Messpunkte}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Messpunkte der Grössen.}
+  \label{tab:messpunkte}
+  \small
+  \begin{tabular}{@{}ll@{}}
+    \toprule
+    Grösse & Messort \\
+    \midrule
+    $\uN$ & Buchsen «Trenntransformator Sekundär» \\
+    $\uWR$ & Buchsen direkt links der H-Brücke \\
+    $\iN$ & Stromzange in der AC-Leitung \\
+    $\Udc$ & Wechselrichter-Bedienfeld, Klemmen $+$ und $-$ \\
+    $u_{\mathrm{Halbleiter}}$ & $+$ gegen obere $\uWR$-Buchse (oberer Schalter, linker Zweig) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Für die Leistungsbetrachtung stand der Spannungswahlschalter des PM\,3000 auf «Netz». Nur für die Spannungsoberschwingungen von $\uWR$ wurde auf «WR» umgeschaltet; die Strom-Oberschwingungen wurden in Stellung «Netz» abgelesen.
+
+\subsection{Vorzeichenkonvention}
+\label{sec:vorzeichen}
+
+Positive Wirkleistung $P>0$ bedeutet Leistungsfluss aus dem Netz~2 über Trenntransformator, Kopplungsinduktivität und Wechselrichter in die Gleichstrommaschine. Der Wechselrichter arbeitet dabei als Gleichrichter, die GM als Motor und die ASM als Generator, der in das Netz~1 speist. Bei $P<0$ wird Leistung in das Netz~2 zurückgespeist (Wechselrichterbetrieb, GM als Generator, ASM als Motor). Der Winkel $\Th$ ist der Nacheilwinkel der Grundschwingung von $\uWR$ gegenüber $\uN$; ein positives $\Th$ gehört zu $P>0$. Die Blindleistung $Q$ des PM\,3000 ist als $\sqrt{S^2-P^2}$ definiert und daher immer positiv; sie enthält die Verzerrungsblindleistung.

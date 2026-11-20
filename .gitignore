@@ -1,0 +1,20 @@
+# LaTeX-Build (Hilfsdateien liegen in out/, das fertige PDF wird nach dem Build zurückkopiert)
+out/
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.tdo
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# System
+.DS_Store
+Thumbs.db

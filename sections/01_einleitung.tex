@@ -1,0 +1,39 @@
+% !TEX root = ../main.tex
+\section{Einleitung}
+
+\subsection{Ausgangslage}
+
+Selbstgeführte Wechselrichter am Netz kommen in rückspeisefähigen Frequenzumrichtern (netzseitiger Teil), in Blindleistungskompensatoren und in Photovoltaik-Wechselrichtern vor. Die Versuchsanleitung (A.~Omlin, HSLU T\&A, Stand 08.11.2024) vergleicht drei Varianten für den netzseitigen Teil eines Frequenzumrichters (Tabelle~\ref{tab:varianten}).
+
+\begin{table}[htbp]
+  \centering
+  \caption{Varianten des netzseitigen Teils eines Frequenzumrichters nach Versuchsanleitung.}
+  \label{tab:varianten}
+  \small
+  \begin{tabular}{@{}p{3.6cm}p{3.6cm}p{3.2cm}p{4.2cm}@{}}
+    \toprule
+    Variante & Energiefluss & $\cos\varphi$ & Oberschwingungen \\
+    \midrule
+    Diodenbrücke & nur Netz $\to$ Last, kein Rückspeisen & -- & -- \\
+    Umkehrgleichrichter (Thyristor) & beide Richtungen & vom Steuerwinkel abhängig, im Normalbetrieb deutlich $<1$ & durch die Schaltung weitgehend gegeben \\
+    Selbstgeführter Wechselrichter (dieser Versuch) & beide Richtungen & frei einstellbar, z.\,B.\ $\cos\varphi=1$ & durch höhere Taktfrequenz und/oder geschickte Pulsmuster deutlich reduzierbar \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Ziel des Versuchs}
+
+Im Versuch werden das Funktionsprinzip sowie typische Strom- und Spannungsverläufe eines einphasigen, selbstgeführten Wechselrichters am Netz praktisch untersucht. Es soll gezeigt werden, wie sich Wirk- und Blindleistung einstellen lassen und wie sich Pulsmuster auf die Oberschwingungen auswirken. Die Messungen fanden am 13.11.2026 und am 20.11.2026 statt.
+
+Gemäss Versuchsanleitung sollen die Studierenden
+
+\begin{itemize}
+  \item das theoretisch behandelte Verhalten des selbstgeführten einphasigen Stromrichters überprüfen,
+  \item wissen, wie sich Wirkleistung und Blindleistung einstellen lassen,
+  \item wissen, wie sich verschiedene Pulsmuster auf die Oberschwingungen auswirken,
+  \item Spannungs- und Stromverläufe bei selbstgeführten Stromrichtern sicher interpretieren können.
+\end{itemize}
+
+\subsection{Aufbau des Berichts}
+
+Der Bericht folgt dem Aufgabenraster der Versuchsanleitung. Kapitel~\ref{sec:aufbau} beschreibt Versuchsaufbau, Messpunkte und die verwendete Vorzeichenkonvention, Kapitel~\ref{sec:theorie} fasst die benötigte Theorie zusammen. Kapitel~\ref{sec:vorbereitung} behandelt die Vorbereitungsaufgabe (Aufgabe~5), Kapitel~\ref{sec:messungen} die Messaufgaben 6.1 bis 6.4. Abweichungen und Unstimmigkeiten werden in Kapitel~\ref{sec:diskussion} diskutiert, das Fazit steht in Kapitel~\ref{sec:fazit}.
