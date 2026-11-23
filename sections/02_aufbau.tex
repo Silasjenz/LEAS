@@ -36,32 +36,11 @@ Der Aufbau war fertig verkabelt (Abbildung~\ref{fig:blockschaltbild}). Die Async
 
 Der Wechselrichter ist ein synchronisierbarer Einphasenwechselrichter mit IGBT-Vollbrücke und antiparallelen Dioden, geteiltem Zwischenkreiskondensator (Mittelpunkt M.P.) und einem antiparallelen Koppelschalter auf der AC-Seite. Er hängt auf der \SI{230}{\volt}-Seite des Trenntransformators; bei einer Zwischenkreisspannung von $\Udc=\SI{259}{\volt}$ wurde eine Grundschwingung der Wechselrichterspannung von $U_1\approx\SI{233}{\volt}$ gemessen (Abschnitt~\ref{sec:messung611}).
 
-Am Bedienfeld lassen sich der Winkel $\Th$ zwischen Wechselrichter- und Netzspannung (Tasten $\leftarrow$ $\rightarrow$), die Gleichspannung (Tasten $\uparrow$ $\downarrow$, wirkt auf die GM-Erregung), das Impulsmuster, die Synchronisation und das Koppeln bzw.\ Entkoppeln bedienen. Fehleranzeigen (Überstrom, IGBT, Steuerung) sind ebenfalls vorhanden. Zur Verfügung stehen folgende Pulsmuster:
+Am Bedienfeld lassen sich der Winkel $\Th$ zwischen Wechselrichter- und Netzspannung (Tasten $\leftarrow$ $\rightarrow$), die Gleichspannung (Tasten $\uparrow$ $\downarrow$, wirkt auf die GM-Erregung), das Impulsmuster, die Synchronisation und das Koppeln bzw.\ Entkoppeln bedienen. Zur Verfügung stehen die geschlossene Rechteckschwingung (Grundfrequenztaktung), die Muster mit eliminierter 3.\ bis 5., 3.\ bis 9.\ und 3.\ bis 21.\ Oberschwingung sowie das Trägerverfahren (sinusbewertet) fein und grob.
 
-\begin{itemize}
-  \item geschlossene Rechteckschwingung (Grundfrequenztaktung),
-  \item 3.\ bis 5.\ Oberschwingung eliminiert,
-  \item 3.\ bis 9.\ Oberschwingung eliminiert,
-  \item 3.\ bis 21.\ Oberschwingung eliminiert,
-  \item Trägerverfahren (sinusbewertet) fein,
-  \item Trägerverfahren (sinusbewertet) grob.
-\end{itemize}
+\subsection{Geräte und Messpunkte}
 
-\subsection{Geräte}
-
-\begin{itemize}
-  \item Einphasiger Wechselrichter mit Ansteuerung (mit dem Netz synchronisierbar),
-  \item Entkopplungsinduktivität \SI{70}{\milli\henry}, \SI{30}{\ampere}; bei \SI{50}{\hertz} ist $X=\omega L\approx\SI{22}{\ohm}$,
-  \item Einphasentransformator $400/230$\,V, \SI{25}{\ampere},
-  \item Gleichstrommaschine \SI{6}{\kilo\watt}, \SI{500}{\volt},
-  \item Asynchronmaschine \SI{5.5}{\kilo\watt}, $3\times\SI{400}{\volt}$,
-  \item Voltech Power-Analyzer PM\,3000 mit Spannungswahlschalter (Stellung «Netz»: $\uN$, Stellung «WR»: $\uWR$; der Strom ist immer $\iN$),
-  \item Vierkanal-Oszilloskop Tektronix TPS2014 (isolierte Kanäle) mit Stromzange und Spannungs-Mess-Trennverstärkern,
-  \item Multimeter Metra Hit 18S (Messung von $\Udc$),
-  \item optischer Drehzahlmesser.
-\end{itemize}
-
-\subsection{Messpunkte}
+Die Entkopplungsinduktivität hat \SI{70}{\milli\henry} (\SI{30}{\ampere}); bei \SI{50}{\hertz} ist $X=\omega L\approx\SI{22}{\ohm}$. Hinzu kommen ein Einphasentransformator $400/230$\,V (\SI{25}{\ampere}), eine Gleichstrommaschine (\SI{6}{\kilo\watt}, \SI{500}{\volt}) und eine Asynchronmaschine (\SI{5.5}{\kilo\watt}, $3\times\SI{400}{\volt}$). Gemessen wurde mit dem Voltech-Power-Analyzer PM\,3000 und seinem Spannungswahlschalter (Stellung «Netz»: $\uN$, Stellung «WR»: $\uWR$; der Strom ist immer $\iN$), dem Vierkanal-Oszilloskop Tektronix TPS2014 (isolierte Kanäle) mit Stromzange und Trennverstärkern, dem Multimeter Metra Hit 18S ($\Udc$) und einem optischen Drehzahlmesser. Tabelle~\ref{tab:messpunkte} nennt die Messpunkte.
 
 \begin{table}[htbp]
   \centering

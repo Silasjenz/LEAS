@@ -129,7 +129,7 @@ Lastpunkt: **P ≈ 1.15 kW, Q₁ ≈ 0** (1.5 kW wurde nicht erreicht, siehe off
 | Sinus grob | 30 % | 12 % | 22 % | 10 % |
 | 3.–5. elim. | 0.5 % | 30 % | 9 % | 7 % |
 
-Bilder: fein `img/Scan_20261120_095904.jpg`, grob `img/Scan_20261120_103938.jpg`, 3.–5. eliminiert `img/20261120_093257.jpg`
+Bilder: fein `img/Scan_20261120_095904.jpg`, grob `img/Scan_20261120_103938.jpg`, 3.–5. eliminiert `img/Scan_20261120_100652.jpg`, Grundfrequenz `img/20261120_093257.jpg`
 
 - Das benötigte Udc steigt von 3.–5. eliminiert (282 V) zu Sinus-PWM (~360 V): Das ist die kleinere Grundschwingung pro Volt Udc (U₁/Udc ≈ 0.82 vs. ≈ 0.64 bei 230 V).
 - 3.–5. eliminiert: U₃ ≈ 0 bestätigt die Elimination. U₅ = 30 % widerspricht der Erwartung (sollte ≈ 0 sein, evtl. Ablese- oder Notierfehler).
@@ -162,9 +162,9 @@ Notiz: «Bei −15° und 288 V» (Einstellung der Messung). Schlupf bei Nennlast
 | `img/Scan_20261113_101112.jpg` | 6.1.1 Rechteck: u_N, u_WR, i_N |
 | `img/Scan_20261120_095904.jpg` | 6.2.1 Sinus fein |
 | `img/Scan_20261120_103938.jpg` | 6.2.1 Sinus grob |
-| `img/20261120_093257.jpg` | 6.2.1 3.–5. eliminiert |
+| `img/20261120_093257.jpg` | 6.2.1 Grundfrequenztaktung (Referenz, Einstellung nicht notiert) |
 | `img/Scan_20261120_102240.jpg` | 6.3 Halbleiter |
-| `img/Scan_20261120_100652.jpg` | **nicht zugeordnet** – Inhalt prüfen |
+| `img/Scan_20261120_100652.jpg` | 6.2.1 3.–5. eliminiert (Zuordnung vermutet, da nur vier Muster gemessen wurden) |
 
 ---
 

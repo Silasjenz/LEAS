@@ -2,7 +2,7 @@
 \section{Messungen und Auswertung}
 \label{sec:messungen}
 
-Soweit nicht anders vermerkt, stand der Spannungswahlschalter des PM\,3000 auf «Netz». Die Oszillogramme tragen die Zeitstempel des Oszilloskops und stammen vom 13.11.2026 (Aufgabe~6.1.1) bzw.\ vom 20.11.2026 (alle weiteren). Bei den Oszillogrammen sind die Spuren durch ihre Form identifizierbar (sinusförmige Netzspannung, pulsförmige Wechselrichterspannung, Netzstrom in Magenta); die Kanalfarben unterscheiden sich zwischen den beiden Messtagen.
+Die Oszillogramme tragen die Zeitstempel des Oszilloskops (13.11.2026 für Aufgabe~6.1.1, 20.11.2026 für alle weiteren). Die Spuren sind an ihrer Form erkennbar (sinusförmige Netzspannung, pulsförmige Wechselrichterspannung, Netzstrom in Magenta); die Kanalfarben unterscheiden sich zwischen den Messtagen.
 
 % ==========================================================================
 \subsection{Aufgabe 6.1.1: Stromform bei Grundfrequenztaktung}
@@ -12,7 +12,7 @@ Eingestellt wurden $\Th\approx\SI{0}{\degree}$ und $\Udc=\SI{259}{\volt}$. Der G
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\linewidth]{Scan_20261113_101112.jpg}
+  \includegraphics[width=0.62\linewidth]{Scan_20261113_101112.jpg}
   \caption{Aufgabe 6.1.1, Grundfrequenztaktung bei $\Udc=\SI{259}{\volt}$, $\Th\approx\SI{0}{\degree}$ (13.11.2026): rechteckförmige Wechselrichterspannung, sinusförmige Netzspannung und Netzstrom (Magenta). Skalen: \SI{200}{\volt}/div, \SI{2}{\ampere}/div, \SI{5}{\milli\second}/div.}
   \label{fig:611}
 \end{figure}
@@ -128,13 +128,13 @@ $Q$ hat ein Minimum bei $\Udc\approx\SI{250}{\volt}$ bis \SI{275}{\volt}. Dort i
 
 \todo[inline]{6.1.2: $P_1$, $Q_1$ und $I_3$ fehlen in beiden Tabellen. Falls die Werte am PM\,3000 noch nachgemessen werden können, hier ergänzen; sonst bleibt es bei der qualitativen Begründung oben.}
 
-Zum Einfluss von $\Th$ und $\Udc$ auf die Harmonischen: Nach \eqref{eq:rechteck} und \eqref{eq:In} sind die Oberschwingungsamplituden von $\uWR$ proportional zu $\Udc$ und unabhängig von $\Th$ (der Winkel verschiebt nur die Phase). Entsprechend sollten die Strom-Oberschwingungen $I_n=U_{\mathrm{WR},n}/(nX)$ mit $\Udc$ zunehmen und von $\Th$ nicht abhängen. Das ist eine theoretische Erwartung; gemessen wurden die Harmonischen in 6.1.2 nicht.
+Nach \eqref{eq:rechteck} und \eqref{eq:In} sind die Oberschwingungsamplituden von $\uWR$ proportional zu $\Udc$ und unabhängig von $\Th$ (der Winkel verschiebt nur die Phase). Die Stromoberschwingungen $I_n=U_{\mathrm{WR},n}/(nX)$ sollten deshalb mit $\Udc$ zunehmen und von $\Th$ nicht abhängen; gemessen wurden die Harmonischen in dieser Aufgabe nicht.
 
 % ==========================================================================
 \subsection{Aufgabe 6.2.1: Weitere Pulsmuster}
 \label{sec:messung621}
 
-Verglichen wurden die Muster «Trägerverfahren fein», «Trägerverfahren grob» und «3.\ und 5.\ eliminiert» bei einem festen Lastpunkt von $P\approx\SI{1.15}{\kilo\watt}$ und $Q_1\approx0$. Die Anleitung nennt $P=\SI{1.5}{\kilo\watt}$ als Beispiel; dieser Wert wurde nicht angefahren: Das Einpendeln von $P$ und $Q_1\approx0$ durch iteratives Nachstellen von $\Th$ und $\Udc$ war aufwendig, und bei rund \SI{1.1}{\kilo\watt} liess sich $Q_1\approx0$ bei allen Mustern rasch einstellen. Für den Vergleich der Muster zählt nur, dass der Lastpunkt für alle gleich ist, nicht seine Höhe; als gemeinsamer Lastpunkt wurde deshalb $P\approx\SI{1.15}{\kilo\watt}$ verwendet. Eingestellt wurden die Werte in Tabelle~\ref{tab:621_einst}.
+Verglichen wurden die Muster «Trägerverfahren fein», «Trägerverfahren grob» und «3.\ und 5.\ eliminiert» (sowie die Grundfrequenztaktung als Referenz) bei einem festen Lastpunkt von $P\approx\SI{1.15}{\kilo\watt}$ und $Q_1\approx0$. Die Anleitung nennt $P=\SI{1.5}{\kilo\watt}$ als Beispiel; dieser Wert wurde nicht angefahren: Das Einpendeln von $P$ und $Q_1\approx0$ durch iteratives Nachstellen von $\Th$ und $\Udc$ war aufwendig, und bei rund \SI{1.1}{\kilo\watt} liess sich $Q_1\approx0$ bei allen Mustern rasch einstellen. Für den Vergleich der Muster zählt nur, dass der Lastpunkt für alle gleich ist, nicht seine Höhe; als gemeinsamer Lastpunkt wurde deshalb $P\approx\SI{1.15}{\kilo\watt}$ verwendet. Eingestellt wurden die Werte in Tabelle~\ref{tab:621_einst}.
 
 \begin{table}[htbp]
   \centering
@@ -174,43 +174,43 @@ Die gemessenen Oberschwingungen stehen in Tabelle~\ref{tab:621_harm}. Die Spannu
 
 \todo[inline]{Tabelle~\ref{tab:621_harm}: Bezugsgrösse der Prozentwerte ist nicht notiert (vermutlich Anzeige des PM\,3000 in \% der Grundschwingung). Bitte bestätigen.}
 
-Die Oszillogramme der Muster zeigen Abbildungen~\ref{fig:621_gf} bis \ref{fig:621_grob}. Bei «fein» sind pro Netzperiode deutlich mehr Schaltflanken zu sehen als bei «grob».
+Die Oszillogramme der vier Muster zeigt Abbildung~\ref{fig:621}.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\linewidth]{20261120_093257.jpg}
-  \caption{Grundfrequenztaktung (Referenz, 20.11.2026, 09:08): Wechselrichterspannung (Cyan) und Netzstrom (Magenta). Skalen: \SI{200}{\volt}/div, \SI{5}{\ampere}/div, \SI{5}{\milli\second}/div.}
-  \label{fig:621_gf}
-\end{figure}
+  \begin{subfigure}[t]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{20261120_093257.jpg}
+    \caption{Grundfrequenztaktung (Referenz, \SI{5}{\milli\second}/div, ohne Netzspannung)}
+    \label{fig:621_gf}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{Scan_20261120_100652.jpg}
+    \caption{«3.\ und 5.\ eliminiert», $\Udc=\SI{282}{\volt}$}
+    \label{fig:621_elim}
+  \end{subfigure}
 
-\todo[inline]{Abb.~\ref{fig:621_gf}: Einstellung ($\Udc$, $\Th$) und Lastpunkt dieser Grundfrequenztaktung-Messung sind nicht notiert. Das Bild enthält keine Netzspannungsspur. Bitte ergänzen.}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\linewidth]{Scan_20261120_100652.jpg}
-  \caption{Muster «3.\ und 5.\ eliminiert», $\Udc=\SI{282}{\volt}$, $\Th=\SI{29.8}{\degree}$ (20.11.2026, 09:42). Skalen: \SI{200}{\volt}/div, \SI{5}{\ampere}/div, \SI{2.5}{\milli\second}/div.}
-  \label{fig:621_elim}
-\end{figure}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\linewidth]{Scan_20261120_095904.jpg}
-  \caption{Muster «Trägerverfahren fein», $\Udc=\SI{358}{\volt}$, $\Th=\SI{29.8}{\degree}$ (20.11.2026, 09:34). Skalen: \SI{200}{\volt}/div, \SI{5}{\ampere}/div, \SI{2.5}{\milli\second}/div.}
-  \label{fig:621_fein}
-\end{figure}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\linewidth]{Scan_20261120_103938.jpg}
-  \caption{Muster «Trägerverfahren grob», $\Udc=\SI{363}{\volt}$, $\Th=\SI{29.8}{\degree}$ (20.11.2026, 10:14). Skalen: \SI{200}{\volt}/div, \SI{5}{\ampere}/div, \SI{2.5}{\milli\second}/div.}
-  \label{fig:621_grob}
+  \medskip
+  \begin{subfigure}[t]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{Scan_20261120_095904.jpg}
+    \caption{Trägerverfahren fein, $\Udc=\SI{358}{\volt}$}
+    \label{fig:621_fein}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{Scan_20261120_103938.jpg}
+    \caption{Trägerverfahren grob, $\Udc=\SI{363}{\volt}$}
+    \label{fig:621_grob}
+  \end{subfigure}
+  \caption{Pulsmuster am Lastpunkt (20.11.2026): Netzspannung (Gelb), Wechselrichterspannung (Cyan) und Netzstrom (Magenta). Teilbilder (b) bis (d): $P\approx\SI{1.15}{\kilo\watt}$, $\Th=\SI{29.8}{\degree}$. Skalen: \SI{200}{\volt}/div, \SI{5}{\ampere}/div, \SI{2.5}{\milli\second}/div (Teilbild (a): \SI{5}{\milli\second}/div).}
+  \label{fig:621}
 \end{figure}
 
 \paragraph{Beobachtungen.} Bei «3.\ und 5.\ eliminiert» ist $U_3=\SI{0.5}{\percent}$, die Elimination der 3.\ Oberschwingung ist damit bestätigt. Der gemessene Wert $U_5=\SI{30}{\percent}$ widerspricht der Erwartung (nahezu null); angesichts der stark schwankenden Anzeige (siehe unten) ist er vermutlich ein Ablesefehler. Dass $I_3=\SI{9}{\percent}$ trotz $U_3\approx0$ nicht verschwindet, könnte an einer Oberschwingung der Netzspannung liegen (Vermutung, $u_{\mathrm N}$ wurde nicht ausgewertet). Beim Trägerverfahren sind $U_3=\SI{20}{\percent}$ bzw.\ \SI{30}{\percent} unerwartet hoch, denn die Oberschwingungen sollten um die Schaltfrequenz liegen. Mögliche Ursachen sind Übermodulation (wenn die Grundschwingung am Rand des Aussteuerbereichs liegt), Ablesefehler oder ein anderer Prozentbezug (Vermutungen).
 
 \paragraph{Messunsicherheit der Oberschwingungsanteile.} Die Anzeige der Oberschwingungen am PM\,3000 schwankte bei den Pulsmustern stark; die abgelesenen Anteile streuten zwischen etwa \SI{2}{\percent} und \SI{50}{\percent}. Pro Grösse wurden deshalb mehrere Werte abgelesen und ungefähr gemittelt. Die Prozentwerte in Tabelle~\ref{tab:621_harm} sind daher nur grobe Richtwerte, und ein Vergleich der Muster auf wenige Prozentpunkte genau ist damit nicht möglich.
 
-\todo[inline]{6.2.1: Qualitative Beschreibung der Stromformen auf den Oszillogrammen (glatter/stufiger Strom je Muster) ergänzen, sobald geprüft ist, welche Magenta-Spur zu welchem Lastpunkt gehört.}
+\paragraph{Stromformen.} Auf den Oszillogrammen ist der Unterschied der Muster gut zu sehen. Bei Grundfrequenztaktung ist der Strom stark verzerrt und zeigt pro Halbperiode zwei Höcker. Beim Trägerverfahren «fein» besteht $\uWR$ aus einer sehr dichten Pulsfolge, und der Netzstrom verläuft nahezu glatt mit kleinem Schaltrippel. Bei «grob» gibt es deutlich weniger Pulse pro Netzperiode; der Strom ist sichtbar zackig und knickt bei jeder Schaltflanke. Beim Muster mit eliminierten Oberschwingungen liegt $\uWR$ dazwischen: Der Strom ist zwischen den Flanken glatt und hat Spitzen an den Schaltzeitpunkten. Qualitativ ist der Strom bei «fein» damit am glattesten, was zur Theorie passt; die abgelesenen Prozentwerte zeigen das wegen ihrer Streuung nicht.
+
+\todo[inline]{Abb.~\ref{fig:621_gf}: Einstellung ($\Udc$, $\Th$) und Lastpunkt der Grundfrequenztaktung sind nicht notiert. Die Zuordnung von Abb.~\ref{fig:621_elim} zu «3.\ und 5.\ eliminiert» ergibt sich daraus, dass nur vier Muster gemessen wurden (Vermutung der Gruppe); das Bild zeigt mehr Kerben, als man für dieses Muster erwarten würde.}
 
 % ==========================================================================
 \subsection{Aufgabe 6.2.2: Einstellen von \texorpdfstring{$P$ und $Q$}{P und Q} beim besten Muster}
@@ -264,12 +264,14 @@ Erwartet wird für einen Halbleiter des Wechselrichters Folgendes (Skizze in Abb
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\linewidth]{Scan_20261120_102240.jpg}
+  \includegraphics[width=0.62\linewidth]{Scan_20261120_102240.jpg}
   \caption{Aufgabe 6.3, Oszillogramm (20.11.2026, 09:58). Skalen: \SI{200}{\volt}/div (CH1, CH2), \SI{5}{\ampere}/div (CH3), \SI{2.5}{\milli\second}/div.}
   \label{fig:halbleiter_mess}
 \end{figure}
 
-\todo[inline]{6.3: Auf dem Oszillogramm (Abb.~\ref{fig:halbleiter_mess}) sind zwei Spannungsspuren (Gelb, Cyan) und der Strom (Magenta) zu sehen. Es ist nicht notiert, welche Spur $u_{\mathrm{Halbleiter}}$ und welche $\uWR$ ist und was die Magenta-Spur misst (laut Besprechung ist der Halbleiterstrom nicht direkt messbar; Ersatz wäre der Gleichstrom am $+$-Kabel). Bitte zuordnen und die Kurvenform beschreiben.}
+Gemessen wurde bei Grundfrequenztaktung. Das Oszillogramm zeigt zwei zueinander komplementäre Rechteckspannungen (Gelb, Cyan) mit einem Hub von rund \SI{290}{\volt}, was der Zwischenkreisspannung entspricht (laut Notiz vermutlich $\Th=\SI{-15}{\degree}$ und $\Udc=\SI{288}{\volt}$). Nach Angabe der Gruppe sind es die Spannungen über zwei Halbleitern, und zwar Cyan über dem Schalter, der die positive Halbwelle von $\uWR$ schaltet, und Gelb über dem Schalter der negativen Halbwelle; ein Foto des Messaufbaus, das diese Zuordnung belegt, gibt es nicht. Magenta ist der Netzstrom $\iN$. Die Flanken sind sauber, bei \SI{200}{\volt}/div sind keine Überschwinger zu erkennen. Der Netzstrom ändert bei jeder Schaltflanke seine Steigung, wie es $L\,\mathrm{d}i/\mathrm{d}t=\uWR-\uN$ verlangt; er fliesst durch den Halbleiter, solange dieser leitet.
+
+\todo[inline]{6.3: Einstellung der Messung ($-15^\circ$ / \SI{288}{\volt} laut Notiz) bestätigen; die Spurzuordnung (Cyan = Schalter der positiven, Gelb = Schalter der negativen Halbwelle) ist eine Vermutung ohne Foto des Aufbaus.}
 
 % ==========================================================================
 \subsection{Aufgabe 6.4: Drehzahl der Asynchronmaschine}
