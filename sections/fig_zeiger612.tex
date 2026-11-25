@@ -1,0 +1,101 @@
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[t]{0.32\linewidth}\centering
+  \begin{tikzpicture}[>={Stealth[length=2mm]},scale=0.82,every node/.style={font=\scriptsize}]
+    \path[use as bounding box] (-2.0,-1.9) rectangle (3.6,1.9);
+    \draw[gray!40] (-1.9,0) -- (3.5,0);
+    \draw[->,line width=1.4pt,cP] (0,0) -- (-1.423,0);
+    \draw[->,line width=1.4pt,cQ] (-1.423,0) -- (-1.423,-0.251);
+    \draw[->,thick,cI] (0,0) -- (-1.423,-0.251) node[above] {$\underline I$};
+    \draw[->,thick] (0,0) -- (2.600,0) node[above right=-1pt] {$\underline U_{\mathrm N}$};
+    \draw[->,thick,cU] (0,0.0) -- (2.443,0.889) node[above right=-1pt] {$\underline U_{\mathrm{WR1}}$};
+    \draw[->,thick,dashed,cD] (2.443,0.889) -- (2.600,0);
+    \draw[cU] (1.9,0) arc (0:20:1.9);
+    \node[cU] at (2.167,0.382) {$\Th$};
+    \node[align=center] at (0.8,-1.65) {\textcolor{cP}{$P<0$}, \textcolor{cQ}{$Q$ klein}};
+  \end{tikzpicture}
+  \caption{$\Th=\SI{-20}{\degree}$, $U_{\mathrm{WR1}}=\UN$}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.32\linewidth}\centering
+  \begin{tikzpicture}[>={Stealth[length=2mm]},scale=0.82,every node/.style={font=\scriptsize}]
+    \path[use as bounding box] (-2.0,-1.9) rectangle (3.6,1.9);
+    \draw[gray!40] (-1.9,0) -- (3.5,0);
+    \node[cI] at (0.9,-0.45) {$\underline I\approx0$};
+    \draw[->,thick] (0,0) -- (2.600,0) node[above right=-1pt] {$\underline U_{\mathrm N}$};
+    \draw[->,thick,cU] (0,-0.13) -- (2.600,-0.130) node[below=-1pt] {$\underline U_{\mathrm{WR1}}$};
+    \node[align=center] at (0.8,-1.65) {\textcolor{cP}{$P=0$}, \textcolor{cQ}{$Q=0$}};
+  \end{tikzpicture}
+  \caption{$\Th=\SI{0}{\degree}$, $U_{\mathrm{WR1}}=\UN$}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.32\linewidth}\centering
+  \begin{tikzpicture}[>={Stealth[length=2mm]},scale=0.82,every node/.style={font=\scriptsize}]
+    \path[use as bounding box] (-2.0,-1.9) rectangle (3.6,1.9);
+    \draw[gray!40] (-1.9,0) -- (3.5,0);
+    \draw[->,line width=1.4pt,cP] (0,0) -- (1.423,0);
+    \draw[->,line width=1.4pt,cQ] (1.423,0) -- (1.423,-0.251);
+    \draw[->,thick,cI] (0,0) -- (1.423,-0.251) node[above] {$\underline I$};
+    \draw[->,thick] (0,0) -- (2.600,0) node[above right=-1pt] {$\underline U_{\mathrm N}$};
+    \draw[->,thick,cU] (0,0.0) -- (2.443,-0.889) node[below right=-1pt] {$\underline U_{\mathrm{WR1}}$};
+    \draw[->,thick,dashed,cD] (2.443,-0.889) -- (2.600,0);
+    \draw[cU] (1.9,0) arc (0:-20:1.9);
+    \node[cU] at (2.167,-0.382) {$\Th$};
+    \node[align=center] at (0.8,-1.65) {\textcolor{cP}{$P>0$}, \textcolor{cQ}{$Q$ klein}};
+  \end{tikzpicture}
+  \caption{$\Th=\SI{+20}{\degree}$, $U_{\mathrm{WR1}}=\UN$}
+  \end{subfigure}
+
+  \medskip
+  \begin{subfigure}[t]{0.32\linewidth}\centering
+  \begin{tikzpicture}[>={Stealth[length=2mm]},scale=0.82,every node/.style={font=\scriptsize}]
+    \path[use as bounding box] (-2.0,-1.9) rectangle (3.6,1.9);
+    \draw[gray!40] (-1.9,0) -- (3.5,0);
+    \draw[->,line width=1.4pt,cQ] (0.000,0) -- (0.000,-0.832);
+    \draw[->,thick,cI] (0,0) -- (0.000,-0.832) node[right] {$\underline I$};
+    \draw[->,thick] (0,0) -- (2.600,0) node[above right=-1pt] {$\underline U_{\mathrm N}$};
+    \draw[->,thick,cU] (0,-0.13) -- (2.080,-0.130) node[below=-1pt] {$\underline U_{\mathrm{WR1}}$};
+    \draw[->,thick,dashed,cD] (2.080,-0.130) -- (2.600,0);
+    \node[align=center] at (0.8,-1.65) {\textcolor{cP}{$P=0$}, \textcolor{cQ}{$Q>0$ (untererregt)}};
+  \end{tikzpicture}
+  \caption{$\Th=\SI{0}{\degree}$, $U_{\mathrm{WR1}}<\UN$ ($\Udc$ klein)}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.32\linewidth}\centering
+  \begin{tikzpicture}[>={Stealth[length=2mm]},scale=0.82,every node/.style={font=\scriptsize}]
+    \path[use as bounding box] (-2.0,-1.9) rectangle (3.6,1.9);
+    \draw[gray!40] (-1.9,0) -- (3.5,0);
+    \node[cI] at (0.9,-0.45) {$\underline I\approx0$};
+    \draw[->,thick] (0,0) -- (2.600,0) node[above right=-1pt] {$\underline U_{\mathrm N}$};
+    \draw[->,thick,cU] (0,-0.13) -- (2.600,-0.130) node[below=-1pt] {$\underline U_{\mathrm{WR1}}$};
+    \node[align=center] at (0.8,-1.65) {\textcolor{cP}{$P=0$}, \textcolor{cQ}{$Q=0$}};
+  \end{tikzpicture}
+  \caption{$\Th=\SI{0}{\degree}$, $U_{\mathrm{WR1}}=\UN$}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.32\linewidth}\centering
+  \begin{tikzpicture}[>={Stealth[length=2mm]},scale=0.82,every node/.style={font=\scriptsize}]
+    \path[use as bounding box] (-2.0,-1.9) rectangle (3.6,1.9);
+    \draw[gray!40] (-1.9,0) -- (3.5,0);
+    \draw[->,line width=1.4pt,cQ] (0.000,0) -- (0.000,0.832);
+    \draw[->,thick,cI] (0,0) -- (0.000,0.832) node[right] {$\underline I$};
+    \draw[->,thick] (0,0) -- (2.600,0) node[above right=-1pt] {$\underline U_{\mathrm N}$};
+    \draw[->,thick,cU] (0,-0.13) -- (3.120,-0.130) node[below=-1pt] {$\underline U_{\mathrm{WR1}}$};
+    \draw[->,thick,dashed,cD] (3.120,-0.130) -- (2.600,0);
+    \node[align=center] at (0.8,-1.65) {\textcolor{cP}{$P=0$}, \textcolor{cQ}{$Q<0$ (übererregt)}};
+  \end{tikzpicture}
+  \caption{$\Th=\SI{0}{\degree}$, $U_{\mathrm{WR1}}>\UN$ ($\Udc$ gross)}
+  \end{subfigure}
+
+  \medskip
+  \begin{tikzpicture}[>={Stealth[length=2mm]},every node/.style={font=\scriptsize}]
+    \draw[->,thick] (0,0) -- (0.6,0) node[right] {$\underline U_{\mathrm N}$};
+    \draw[->,thick,cU] (1.6,0) -- (2.2,0) node[right] {$\underline U_{\mathrm{WR1}}$};
+    \draw[->,thick,dashed,cD] (3.5,0) -- (4.1,0) node[right] {$\Delta\underline U=\mathrm jX\underline I$};
+    \draw[->,thick,cI] (6.3,0) -- (6.9,0) node[right] {$\underline I$};
+    \draw[->,line width=1.4pt,cP] (7.6,0) -- (8.2,0) node[right] {Wirkanteil ($P$)};
+    \draw[->,line width=1.4pt,cQ] (10.9,0) -- (11.5,0) node[right] {Blindanteil ($Q$)};
+  \end{tikzpicture}
+  \caption{Zeigerdiagramme zur Einstellung der Leistungen (qualitativ, $\underline I$ vergrössert dargestellt). Oben: Variation des Winkels $\Th$ bei gleicher Amplitude. $\underline U_{\mathrm{WR1}}$ dreht sich um $\underline U_{\mathrm N}$, $\Delta\underline U$ steht fast senkrecht auf $\underline U_{\mathrm N}$, und der Strom liegt fast in Phase oder Gegenphase zu $\underline U_{\mathrm N}$: Es fliesst hauptsächlich Wirkleistung, deren Vorzeichen mit $\Th$ wechselt. Unten: Variation der Amplitude über $\Udc$ bei $\Th=0$. $\Delta\underline U$ liegt parallel zu $\underline U_{\mathrm N}$, der Strom steht senkrecht dazu: Es fliesst nur Blindleistung, deren Vorzeichen davon abhängt, ob $U_{\mathrm{WR1}}$ kleiner oder grösser als $\UN$ ist.}
+  \label{fig:zeiger612}
+\end{figure}
