@@ -3,6 +3,7 @@
 % Bauen: Ctrl+Alt+B (LaTeX Workshop) oder  latexmk main.tex  (siehe README.md)
 \documentclass[a4paper,11pt]{scrartcl}
 \input{preamble}
+\KOMAoptions{bibliography=totoc}
 
 \begin{document}
 
@@ -39,5 +40,23 @@
 \input{sections/05_messungen}
 \input{sections/06_diskussion}
 \input{sections/07_fazit}
+
+% ---------------------------------------------------------------- KI-Deklaration
+\section*{Deklaration zur Verwendung von KI}
+\addcontentsline{toc}{section}{Deklaration zur Verwendung von KI}
+
+Bei der Erstellung dieses Berichts wurde das KI-Sprachmodell Claude (Anthropic) eingesetzt, und zwar wie folgt:
+\begin{itemize}
+  \item \emph{Während der Messungen:} für Verständnisfragen zum Versuch, zur Bedienung des Aufbaus und zur Interpretation der Messgrössen.
+  \item \emph{Beim Schreiben:} für die Strukturierung des Berichts, für das Formulieren von Textabschnitten und für LaTeX-Code (Tabellen, Diagramme, Zeigerdiagramme).
+  \item \emph{Bei der Korrektur:} für die Prüfung auf inhaltliche Widersprüche, Rechenfehler, Plausibilität der Messwerte, Sprache und Formales.
+\end{itemize}
+Alle Messungen haben wir selbst durchgeführt und die Messwerte selbst erhoben. Die Vorschläge der KI haben wir geprüft, mit unseren Messdaten und den Unterlagen verglichen und bei Bedarf angepasst. Für den Inhalt des Berichts sind die Autoren verantwortlich.
+
+% ---------------------------------------------------------------- Quellen
+\begin{thebibliography}{9}
+  \bibitem{anleitung} A.~Omlin: \emph{Versuchsanleitung LEAS -- Wechselrichter einphasig}. Hochschule Luzern -- Technik \& Architektur, Stand 08.11.2024.
+  \bibitem{skript} A.~Omlin: \emph{Skript ET+A}, Kapitel «Wechselrichter». Hochschule Luzern -- Technik \& Architektur, 2026.
+\end{thebibliography}
 
 \end{document}
