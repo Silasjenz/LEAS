@@ -159,7 +159,7 @@ Die gemessenen Oberschwingungen stehen in Tabelle~\ref{tab:621_harm}. Die Spannu
 
 \begin{table}[htbp]
   \centering
-  \caption{Oberschwingungen der Pulsmuster am Lastpunkt (Angaben in \%, grobe Richtwerte wegen stark schwankender Anzeige, Bezugsgrösse siehe Hinweis).}
+  \caption{Oberschwingungen der Pulsmuster am Lastpunkt (Angaben in \%, grobe Richtwerte wegen stark schwankender Anzeige, bezogen auf die jeweilige Grundschwingung).}
   \label{tab:621_harm}
   \begin{tabular}{@{}lrrrr@{}}
     \toprule
@@ -172,7 +172,7 @@ Die gemessenen Oberschwingungen stehen in Tabelle~\ref{tab:621_harm}. Die Spannu
   \end{tabular}
 \end{table}
 
-\todo[inline]{Tabelle~\ref{tab:621_harm}: Bezugsgrösse der Prozentwerte ist nicht notiert (vermutlich Anzeige des PM\,3000 in \% der Grundschwingung). Bitte bestätigen.}
+Die Prozentwerte des PM\,3000 beziehen sich auf die jeweilige Grundschwingung. Das zeigt die Messung in Tabelle~\ref{tab:611}: Dort ist $I_3=\SI{145}{\percent}$, was nur bei Bezug auf $I_1$ möglich ist, und der Wert stimmt mit der Theorie (\SI{142}{\percent}) überein.
 
 Die Oszillogramme der drei Muster zeigt Abbildung~\ref{fig:621}; die Grundfrequenztaktung als Referenz ist in Abbildung~\ref{fig:611} dargestellt.
 
@@ -264,32 +264,32 @@ Erwartet wird für einen Halbleiter des Wechselrichters Folgendes (Skizze in Abb
   \label{fig:halbleiter_mess}
 \end{figure}
 
-Gemessen wurde bei Grundfrequenztaktung. Das Oszillogramm zeigt zwei zueinander komplementäre Rechteckspannungen (Gelb, Cyan) mit einem Hub von rund \SI{290}{\volt}, was der Zwischenkreisspannung entspricht (laut Notiz vermutlich $\Th=\SI{-15}{\degree}$ und $\Udc=\SI{288}{\volt}$). Nach Angabe der Gruppe sind es die Spannungen über zwei Halbleitern, und zwar Cyan über dem Schalter, der die positive Halbwelle von $\uWR$ schaltet, und Gelb über dem Schalter der negativen Halbwelle; ein Foto des Messaufbaus, das diese Zuordnung belegt, gibt es nicht. Magenta ist der Netzstrom $\iN$. Die Flanken sind sauber, bei \SI{200}{\volt}/div sind keine Überschwinger zu erkennen. Der Netzstrom ändert bei jeder Schaltflanke seine Steigung, wie es $L\,\mathrm{d}i/\mathrm{d}t=\uWR-\uN$ verlangt; er fliesst durch den Halbleiter, solange dieser leitet.
+Gemessen wurde bei Grundfrequenztaktung. Das Oszillogramm zeigt zwei zueinander komplementäre Rechteckspannungen (Gelb, Cyan) mit einem Hub von rund \SI{290}{\volt}, was der Zwischenkreisspannung entspricht. Nach Angabe der Gruppe sind es die Spannungen über zwei Halbleitern, und zwar Cyan über dem Schalter, der die positive Halbwelle von $\uWR$ schaltet, und Gelb über dem Schalter der negativen Halbwelle; ein Foto des Messaufbaus, das diese Zuordnung belegt, gibt es nicht. Magenta ist der Netzstrom $\iN$. Die Flanken sind sauber, bei \SI{200}{\volt}/div sind keine Überschwinger zu erkennen. Der Netzstrom ändert bei jeder Schaltflanke seine Steigung, wie es $L\,\mathrm{d}i/\mathrm{d}t=\uWR-\uN$ verlangt; er fliesst durch den Halbleiter, solange dieser leitet.
 
-\todo[inline]{6.3: Einstellung der Messung ($-15^\circ$ / \SI{288}{\volt} laut Notiz) bestätigen; die Spurzuordnung (Cyan = Schalter der positiven, Gelb = Schalter der negativen Halbwelle) ist eine Vermutung ohne Foto des Aufbaus.}
+\todo[inline]{6.3: Die Einstellung der Messung ($\Th$, $\Udc$) wurde nicht notiert. Die Spurzuordnung (Cyan = Schalter der positiven, Gelb = Schalter der negativen Halbwelle) ist eine Vermutung ohne Foto des Aufbaus.}
 
 % ==========================================================================
 \subsection{Aufgabe 6.4: Drehzahl der Asynchronmaschine}
 \label{sec:messung64}
 
-Die Drehzahl wurde mit dem optischen Drehzahlmesser gemessen. Tabelle~\ref{tab:drehzahl} stellt die Typenschildwerte den gemessenen Werten gegenüber.
+Die Drehzahl wurde mit dem optischen Drehzahlmesser gemessen. Tabelle~\ref{tab:drehzahl} stellt die Werte aus dem Datenblatt den gemessenen Werten gegenüber.
 
 \begin{table}[htbp]
   \centering
-  \caption{Drehzahl der ASM: Angaben vom Typenschild und gemessene Werte.}
+  \caption{Drehzahl der ASM: Angaben aus dem Datenblatt und gemessene Werte.}
   \label{tab:drehzahl}
   \begin{tabular}{@{}llr@{}}
     \toprule
     Zustand & Quelle & $n$ in \si{\per\minute} \\
     \midrule
-    Leerlauf & Typenschild & 1500 \\
-    Nennlast & Typenschild & 1430 \\
+    Leerlauf & Datenblatt & 1500 \\
+    Nennlast & Datenblatt & 1430 \\
     Generatorbetrieb, $P\approx\SI{1.1}{\kilo\watt}$ & gemessen & 1505 \\
-    Motorbetrieb, $P\approx\SI{1}{\kilo\watt}$ & gemessen & 1488.8 \\
+    Motorbetrieb, $P\approx\SI{-1}{\kilo\watt}$ ($\Th=\SI{-15}{\degree}$, $\Udc=\SI{288}{\volt}$) & gemessen & 1488.7 \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-Der Betriebszustand der ASM folgt aus der Leistungsrichtung (Abschnitt~\ref{sec:vorzeichen}). Bei $P>0$ arbeitet der Wechselrichter als Gleichrichter und treibt die GM als Motor an; die ASM wird dann übersynchron angetrieben und arbeitet als Generator, hier bei \SI{1505}{\per\minute}. Bei $P<0$ speist der Wechselrichter in das Netz~2 zurück, die GM ist Generator und die ASM Motor; sie läuft untersynchron, hier bei \SI{1488.8}{\per\minute}. Die lastpunktbezogenen Messungen der übrigen Aufgaben fanden im Generatorbetrieb statt; der Motorbetrieb wurde nur für diese Drehzahlmessung durch Ändern des Winkels eingestellt.
+Der Betriebszustand der ASM folgt aus der Leistungsrichtung (Abschnitt~\ref{sec:vorzeichen}). Bei $P>0$ arbeitet der Wechselrichter als Gleichrichter und treibt die GM als Motor an; die ASM wird dann übersynchron angetrieben und arbeitet als Generator, hier bei \SI{1505}{\per\minute}. Bei $P<0$ speist der Wechselrichter in das Netz~2 zurück, die GM ist Generator und die ASM Motor; sie läuft untersynchron, hier bei \SI{1488.7}{\per\minute}. Die lastpunktbezogenen Messungen der übrigen Aufgaben fanden im Generatorbetrieb statt; der Motorbetrieb wurde nur für diese Drehzahlmessung durch Ändern des Winkels eingestellt.
 
-Gemessen liegt die Drehzahl damit zwischen etwa \SI{1489}{\per\minute} und \SI{1505}{\per\minute}, also nur rund $\pm\SI{0.5}{\percent}$ um die Synchrondrehzahl von \SI{1500}{\per\minute}; die ASM hält die Drehzahl wie vorausgesetzt praktisch konstant. Daraus ergibt sich im Motorbetrieb ein Schlupf von $s=(1500-1488.8)/1500\approx\SI{0.75}{\percent}$ und im Generatorbetrieb von $s\approx\SI{-0.33}{\percent}$ (berechnet). Der Typenschildwert von \SI{1430}{\per\minute} bei Nennlast entspricht einem Schlupf von rund \SI{4.7}{\percent}; er wurde nicht gemessen, da die Nennlast nicht gefahren wurde. Die Synchrondrehzahl von \SI{1500}{\per\minute} bei \SI{50}{\hertz} entspricht der Polpaarzahl $p=2$; diese wurde aus der Drehzahl abgeleitet und nicht am Typenschild geprüft.
+Gemessen liegt die Drehzahl damit zwischen etwa \SI{1489}{\per\minute} und \SI{1505}{\per\minute}, also nur rund $\pm\SI{0.5}{\percent}$ um die Synchrondrehzahl von \SI{1500}{\per\minute}; die ASM hält die Drehzahl wie vorausgesetzt praktisch konstant. Daraus ergibt sich im Motorbetrieb ein Schlupf von $s=(1500-1488.7)/1500\approx\SI{0.75}{\percent}$ und im Generatorbetrieb von $s\approx\SI{-0.33}{\percent}$ (berechnet). Der Datenblattwert von \SI{1430}{\per\minute} bei Nennlast entspricht einem Schlupf von rund \SI{4.7}{\percent}; er wurde nicht gemessen, da die Nennlast nicht gefahren wurde. Die Synchrondrehzahl von \SI{1500}{\per\minute} bei \SI{50}{\hertz} entspricht der Polpaarzahl $p=2$; diese wurde aus der Drehzahl abgeleitet und nicht im Datenblatt geprüft.
