@@ -101,7 +101,7 @@ Einstellung: θ ≈ 0, Udc = **259 V**, I₁ = **0.827 A** (Minimum, das sich ei
 | Udc [V] | P [W] | Q [var] |
 |---|---|---|
 | 150 | −62.63 | 1134 |
-| 175 | −87.68 | 911 (notiert als «911kvar», vermutlich var) |
+| 175 | −87.68 | 911 |
 | 200 | −116 | 670 |
 | 225 | −150 | 476 |
 | 250 | −192.6 | 340 |
@@ -170,7 +170,7 @@ Notiz: «Bei −15° und 288 V» (Einstellung der Messung). Schlupf bei Nennlast
 
 ## 6. Offene Punkte / Unstimmigkeiten
 
-1. Udc-Reihe: Q bei 350 V fehlt (Tippfehler «258.7 V»), «911kvar» → 911 var.
+1. Udc-Reihe: Q bei 350 V fehlt (Tippfehler «258.7 V»).
 2. P₁, Q₁ und I₃ in 6.1.2 nicht gemessen. Im Bericht P₁ ≈ P begründen, Q₁ qualitativ über das Q-Minimum diskutieren.
 3. Lastpunkt 6.2 auf 1.15 kW statt 1.5 kW reduziert (Grund: Q₁ = 0 bzw. Udc-Grenze nicht erreichbar). Im Bericht begründen.
 4. 3.–5. eliminiert: U₅ = 30 % und I₁ = 1.2 A plausibilisieren.
