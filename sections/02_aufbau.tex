@@ -51,14 +51,32 @@ Die Entkopplungsinduktivität hat \SI{70}{\milli\henry} (\SI{30}{\ampere}); bei 
     \toprule
     Grösse & Messort \\
     \midrule
-    $\uN$ & Buchsen «Trenntransformator Sekundär» \\
-    $\uWR$ & Buchsen direkt links der H-Brücke \\
-    $\iN$ & Stromzange in der AC-Leitung \\
+    $\uN$ & WR-Bedienfeld, Buchse zwischen Koppelschalter und Kopplungsinduktivität \\
+    $\uWR$ & WR-Bedienfeld, Buchse zwischen Kopplungsinduktivität und H-Brücke \\
+    $\iN$ & Stromzange an der Kopplungsinduktivität \\
     $\Udc$ & Wechselrichter-Bedienfeld, Klemmen $+$ und $-$ \\
     $u_{\mathrm{Halbleiter}}$ & $+$ gegen obere $\uWR$-Buchse (oberer Schalter, linker Zweig) \\
     \bottomrule
   \end{tabular}
 \end{table}
+
+Abbildung~\ref{fig:anschluss} zeigt die Messanschlüsse am Wechselrichter. Das Multimeter Metra Hit 18S ist an den Klemmen $+$ und $-$ des Zwischenkreises angeschlossen und misst $\Udc$ (im Bild \SI{290.94}{\volt}). Im Schaltbild auf dem Bedienfeld ist die Kopplungsinduktivität als Rechteck zwischen dem antiparallelen Koppelschalter und der H-Brücke dargestellt. Die beiden roten Messleitungen liegen an den oberen Buchsen links und rechts dieser Induktivität, die beiden schwarzen an der unteren AC-Leitung; deren zwei Buchsen gehören zum selben Leiter. Gegen die untere Leitung misst die linke rote Leitung (zwischen Koppelschalter und Induktivität) die Netzspannung $\uN$ und die rechte rote Leitung (zwischen Induktivität und Brücke) die Wechselrichterspannung $\uWR$. Die Leitungen führen zu den zwei Trennverstärkern (links im Bild), deren Ausgänge am Oszilloskop angeschlossen sind.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\linewidth]{Messaufbau_Anschluss.jpg}
+  \caption{Messanschlüsse am Wechselrichter: Multimeter an $+$/$-$ für $\Udc$, rote Messleitungen links ($\uN$) und rechts ($\uWR$) der Kopplungsinduktivität, schwarze an der unteren AC-Leitung, Trennverstärker links im Bild.}
+  \label{fig:anschluss}
+\end{figure}
+
+Abbildung~\ref{fig:oszi} zeigt die Anschlüsse am Oszilloskop. Auf Kanal~1 und Kanal~2 liegen über die beiden Trennverstärker die Wechselrichterspannung $\uWR$ und die Netzspannung $\uN$; die Zuordnung zu den beiden Kanälen ist nicht auf allen Oszillogrammen identisch. Eine Ausnahme ist Aufgabe~6.3, bei der Kanal~1 und 2 die Spannungen über den Halbleitern zeigen (Abschnitt~\ref{sec:messung63}). Kanal~3 ist die Stromzange, die an der Kopplungsinduktivität den Netzstrom $\iN$ misst.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\linewidth]{Messaufbau_Oszi.jpg}
+  \caption{Anschlüsse am Oszilloskop: Kanal~1 und 2 über die Trennverstärker ($\uWR$ und $\uN$, bei Aufgabe~6.3 Halbleiterspannungen), Kanal~3 Stromzange an der Kopplungsinduktivität ($\iN$).}
+  \label{fig:oszi}
+\end{figure}
 
 Für die Leistungsbetrachtung stand der Spannungswahlschalter des PM\,3000 auf «Netz». Nur für die Spannungsoberschwingungen von $\uWR$ wurde auf «WR» umgeschaltet; die Strom-Oberschwingungen wurden in Stellung «Netz» abgelesen.
 
