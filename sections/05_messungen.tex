@@ -174,33 +174,28 @@ Die gemessenen Oberschwingungen stehen in Tabelle~\ref{tab:621_harm}. Die Spannu
 
 \todo[inline]{Tabelle~\ref{tab:621_harm}: Bezugsgrösse der Prozentwerte ist nicht notiert (vermutlich Anzeige des PM\,3000 in \% der Grundschwingung). Bitte bestätigen.}
 
-Die Oszillogramme der vier Muster zeigt Abbildung~\ref{fig:621}.
+Die Oszillogramme der drei Muster zeigt Abbildung~\ref{fig:621}; die Grundfrequenztaktung als Referenz ist in Abbildung~\ref{fig:611} dargestellt.
 
 \begin{figure}[htbp]
   \centering
   \begin{subfigure}[t]{0.48\linewidth}
     \includegraphics[width=\linewidth]{20261120_093257.jpg}
-    \caption{Grundfrequenztaktung (Referenz, \SI{5}{\milli\second}/div, ohne Netzspannung)}
-    \label{fig:621_gf}
-  \end{subfigure}\hfill
-  \begin{subfigure}[t]{0.48\linewidth}
-    \includegraphics[width=\linewidth]{Scan_20261120_100652.jpg}
-    \caption{«3.\ und 5.\ eliminiert», $\Udc=\SI{282}{\volt}$}
+    \caption{«3.\ und 5.\ eliminiert», $\Udc=\SI{282}{\volt}$ (\SI{5}{\milli\second}/div, ohne Netzspannung)}
     \label{fig:621_elim}
-  \end{subfigure}
-
-  \medskip
+  \end{subfigure}\hfill
   \begin{subfigure}[t]{0.48\linewidth}
     \includegraphics[width=\linewidth]{Scan_20261120_095904.jpg}
     \caption{Trägerverfahren fein, $\Udc=\SI{358}{\volt}$}
     \label{fig:621_fein}
-  \end{subfigure}\hfill
+  \end{subfigure}
+
+  \medskip
   \begin{subfigure}[t]{0.48\linewidth}
     \includegraphics[width=\linewidth]{Scan_20261120_103938.jpg}
     \caption{Trägerverfahren grob, $\Udc=\SI{363}{\volt}$}
     \label{fig:621_grob}
   \end{subfigure}
-  \caption{Pulsmuster am Lastpunkt (20.11.2026): Netzspannung (Gelb), Wechselrichterspannung (Cyan) und Netzstrom (Magenta). Teilbilder (b) bis (d): $P\approx\SI{1.15}{\kilo\watt}$, $\Th=\SI{29.8}{\degree}$. Skalen: \SI{200}{\volt}/div, \SI{5}{\ampere}/div, \SI{2.5}{\milli\second}/div (Teilbild (a): \SI{5}{\milli\second}/div).}
+  \caption{Pulsmuster am Lastpunkt $P\approx\SI{1.15}{\kilo\watt}$, $\Th=\SI{29.8}{\degree}$ (20.11.2026): Wechselrichterspannung (Cyan), Netzstrom (Magenta) und, in (b) und (c), Netzspannung (Gelb). Skalen: \SI{200}{\volt}/div, \SI{5}{\ampere}/div, \SI{2.5}{\milli\second}/div (Teilbild (a): \SI{5}{\milli\second}/div).}
   \label{fig:621}
 \end{figure}
 
@@ -208,9 +203,9 @@ Die Oszillogramme der vier Muster zeigt Abbildung~\ref{fig:621}.
 
 \paragraph{Messunsicherheit der Oberschwingungsanteile.} Die Anzeige der Oberschwingungen am PM\,3000 schwankte bei den Pulsmustern stark; die abgelesenen Anteile streuten zwischen etwa \SI{2}{\percent} und \SI{50}{\percent}. Pro Grösse wurden deshalb mehrere Werte abgelesen und ungefähr gemittelt. Die Prozentwerte in Tabelle~\ref{tab:621_harm} sind daher nur grobe Richtwerte, und ein Vergleich der Muster auf wenige Prozentpunkte genau ist damit nicht möglich.
 
-\paragraph{Stromformen.} Auf den Oszillogrammen ist der Unterschied der Muster gut zu sehen. Bei Grundfrequenztaktung ist der Strom stark verzerrt und zeigt pro Halbperiode zwei Höcker. Beim Trägerverfahren «fein» besteht $\uWR$ aus einer sehr dichten Pulsfolge, und der Netzstrom verläuft nahezu glatt mit kleinem Schaltrippel. Bei «grob» gibt es deutlich weniger Pulse pro Netzperiode; der Strom ist sichtbar zackig und knickt bei jeder Schaltflanke. Beim Muster mit eliminierten Oberschwingungen liegt $\uWR$ dazwischen: Der Strom ist zwischen den Flanken glatt und hat Spitzen an den Schaltzeitpunkten. Qualitativ ist der Strom bei «fein» damit am glattesten, was zur Theorie passt; die abgelesenen Prozentwerte zeigen das wegen ihrer Streuung nicht.
+\paragraph{Stromformen.} Auf den Oszillogrammen ist der Unterschied der Muster gut zu sehen. Bei Grundfrequenztaktung (Abbildung~\ref{fig:611}) ist der Strom stark verzerrt und zeigt pro Halbperiode zwei Höcker. Beim Trägerverfahren «fein» besteht $\uWR$ aus einer sehr dichten Pulsfolge, und der Netzstrom verläuft nahezu glatt mit kleinem Schaltrippel. Bei «grob» gibt es deutlich weniger Pulse pro Netzperiode; der Strom ist sichtbar zackig und knickt bei jeder Schaltflanke. Beim Muster «3.\ und 5.\ eliminiert» ähnelt der Strom dem der Grundfrequenztaktung mit zwei Höckern pro Halbperiode, die Kurvenform ist aber durch die fehlenden 3.\ und 5.\ Oberschwingungen verändert. Qualitativ ist der Strom bei «fein» damit am glattesten, was zur Theorie passt; die abgelesenen Prozentwerte zeigen das wegen ihrer Streuung nicht.
 
-\todo[inline]{Abb.~\ref{fig:621_gf}: Einstellung ($\Udc$, $\Th$) und Lastpunkt der Grundfrequenztaktung sind nicht notiert. Die Zuordnung von Abb.~\ref{fig:621_elim} zu «3.\ und 5.\ eliminiert» ergibt sich daraus, dass nur vier Muster gemessen wurden (Vermutung der Gruppe); das Bild zeigt mehr Kerben, als man für dieses Muster erwarten würde.}
+\paragraph{Interpretation von Abbildung~\ref{fig:621_elim}.} Auf den ersten Blick sieht $\uWR$ in Abbildung~\ref{fig:621_elim} wie ein reines Rechteck aus. Bei genauerem Hinsehen sind oben und unten auf dem Rechteck schwache, symmetrische Einbrüche zu erkennen, ungefähr bei \SI{45}{\degree} und \SI{135}{\degree} jeder Halbwelle. Genau dort liegen bei diesem Muster die Kerben, mit denen die 3.\ und 5.\ Oberschwingung eliminiert werden. Dass sie so blass erscheinen, liegt vermutlich an der Darstellung auf dem LCD des Oszilloskops oder am Handyfoto: Kurze Pulse werden auf dem Display nur schwach dargestellt (Vermutung). Für die Zuordnung zu «3.\ und 5.\ eliminiert» sprechen ausserdem die Notiz aus dem Labor, die Stromamplitude von rund \SI{6.5}{\ampere} Spitze (erwartet sind etwa \SI{7}{\ampere} bei \SI{1.15}{\kilo\watt} und \SI{230}{\volt}) sowie der gemessene Anteil $U_3=\SI{0.5}{\percent}$, der bei einem reinen Rechteck rund \SI{33}{\percent} betragen müsste.
 
 % ==========================================================================
 \subsection{Aufgabe 6.2.2: Einstellen von \texorpdfstring{$P$ und $Q$}{P und Q} beim besten Muster}
