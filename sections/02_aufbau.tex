@@ -38,6 +38,15 @@ Der Wechselrichter ist ein synchronisierbarer Einphasenwechselrichter mit IGBT-V
 
 Am Bedienfeld lassen sich der Winkel $\Th$ zwischen Wechselrichter- und Netzspannung (Tasten $\leftarrow$ $\rightarrow$), die Gleichspannung (Tasten $\uparrow$ $\downarrow$, wirkt auf die GM-Erregung), das Impulsmuster, die Synchronisation und das Koppeln bzw.\ Entkoppeln bedienen. Zur Verfügung stehen die geschlossene Rechteckschwingung (Grundfrequenztaktung), die Muster mit eliminierter 3.\ bis 5., 3.\ bis 9.\ und 3.\ bis 21.\ Oberschwingung sowie das Trägerverfahren (sinusbewertet) fein und grob.
 
+Über dieses Bedienfeld wird die Ansteuerung der H-Brücke eingestellt (Abbildung~\ref{fig:bedienfeld}). Mit «Impulsmuster wählen» wird festgelegt, nach welchem Muster die IGBTs der Brücke schalten; die Leuchtdioden zeigen das aktive Muster an. Die Tasten unter der Winkelanzeige verschieben die Ausgangsspannung der Brücke gegenüber dem Netz um den Winkel $\Th$, die Pfeiltasten neben dem Zeigerinstrument verändern über die Erregung der GM die Gleichspannung $\Udc$, mit der die Brücke gespeist wird. Mit «synchronisieren» und «koppeln/entkoppeln» wird die Brücke auf das Netz synchronisiert und zugeschaltet, mit «Wechselrichter EIN/AUS» werden die Schaltsignale ein- und ausgeschaltet. Die Fehleranzeigen melden Überstrom, IGBT- und Steuerungsfehler, die mit «quittieren» zurückgesetzt werden. Im Bild ist die Grundfrequenztaktung (geschlossene Rechteckschwingung) bei $\Th=\SI{-15.0}{\degree}$ und $\Udc\approx\SI{290}{\volt}$ eingestellt, der Wechselrichter ist eingeschaltet und gekoppelt.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\linewidth]{Messaufbau_Einstellungen.jpg}
+  \caption{Bedienfeld des Wechselrichters zur Einstellung der H-Brücke: Impulsmuster, Winkel $\Th$, Gleichspannung $\Udc$, Synchronisieren und Koppeln sowie Fehleranzeigen.}
+  \label{fig:bedienfeld}
+\end{figure}
+
 \subsection{Geräte und Messpunkte}
 
 Die Entkopplungsinduktivität hat \SI{70}{\milli\henry} (\SI{30}{\ampere}); bei \SI{50}{\hertz} ist $X=\omega L\approx\SI{22}{\ohm}$. Hinzu kommen ein Einphasentransformator $400/230$\,V (\SI{25}{\ampere}), eine Gleichstrommaschine (\SI{6}{\kilo\watt}, \SI{500}{\volt}) und eine Asynchronmaschine (\SI{5.5}{\kilo\watt}, $3\times\SI{400}{\volt}$). Gemessen wurde mit dem Voltech-Power-Analyzer PM\,3000 und seinem Spannungswahlschalter (Stellung «Netz»: $\uN$, Stellung «WR»: $\uWR$; der Strom ist immer $\iN$), dem Vierkanal-Oszilloskop Tektronix TPS2014 (isolierte Kanäle) mit Stromzange und Trennverstärkern, dem Multimeter Metra Hit 18S ($\Udc$) und einem optischen Drehzahlmesser. Tabelle~\ref{tab:messpunkte} nennt die Messpunkte.
