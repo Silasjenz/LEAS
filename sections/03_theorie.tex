@@ -6,13 +6,13 @@ Grundlage dieses Kapitels ist das Kapitel «Wechselrichter» des ET+A-Skripts~\c
 
 \subsection{Wirk- und Blindleistung}
 
-Die Kopplungsinduktivität verbindet zwei Spannungsquellen: den Wechselrichter mit der Grundschwingung $\underline{U}_{\mathrm{WR1}}$ und das Netz mit $\underline{U}_{\mathrm N}$. Die Spannung $\underline{U}_{\mathrm N}$ wird als Bezugszeiger gewählt, $\underline{U}_{\mathrm{WR1}}$ eilt um den Winkel $\Th$ nach. Bei vernachlässigtem Widerstand fliesst der Strom
+Die Kopplungsinduktivität verbindet zwei Spannungsquellen: den Wechselrichter mit der Grundschwingung $\underline{U}_{\mathrm{WR1}}$ und das Netz~2 (einphasig, über den Trenntransformator angeschlossen) mit $\underline{U}_{\mathrm N}$. Die Spannung $\underline{U}_{\mathrm N}$ wird als Bezugszeiger gewählt, $\underline{U}_{\mathrm{WR1}}$ eilt um den Winkel $\Th$ nach. Bei vernachlässigtem Widerstand fliesst der Strom
 \begin{equation}
   \underline{I} = \frac{\underline{U}_{\mathrm N}-\underline{U}_{\mathrm{WR1}}}{\mathrm{j}X},
   \qquad \underline{U}_{\mathrm{WR1}} = U_{\mathrm{WR1}}\,\mathrm{e}^{-\mathrm{j}\Th},
   \qquad X=\omega L .
 \end{equation}
-Mit $a=\UN-U_{\mathrm{WR1}}\cos\Th$ und $b=U_{\mathrm{WR1}}\sin\Th$ ist $\underline{U}_{\mathrm N}-\underline{U}_{\mathrm{WR1}}=a+\mathrm{j}b$ und damit $\underline{I}=(b-\mathrm{j}a)/X$. Die Scheinleistung $\underline{S}=\underline{U}_{\mathrm N}\,\underline{I}^{*}=P+\mathrm{j}Q$ (Bezugssinn aus Sicht des Netzes, passend zur Konvention in Abschnitt~\ref{sec:vorzeichen}) ist dann $\underline{S}=\UN\,(b+\mathrm{j}a)/X$. Der Realteil ist die Wirkleistung, der Imaginärteil die Blindleistung der Grundschwingung:
+Mit $a=\UN-U_{\mathrm{WR1}}\cos\Th$ und $b=U_{\mathrm{WR1}}\sin\Th$ ist $\underline{U}_{\mathrm N}-\underline{U}_{\mathrm{WR1}}=a+\mathrm{j}b$ und damit $\underline{I}=(b-\mathrm{j}a)/X$. Die Scheinleistung $\underline{S}=\underline{U}_{\mathrm N}\,\underline{I}^{*}=P+\mathrm{j}Q$ (Bezugssinn: $\underline I$ fliesst vom Netz~2 über Trenntransformator und Kopplungsinduktivität in den Wechselrichter, $P>0$ bedeutet also Leistungsbezug aus dem Netz~2; passend zur Konvention in Abschnitt~\ref{sec:vorzeichen}) ist dann $\underline{S}=\UN\,(b+\mathrm{j}a)/X$. Der Realteil ist die Wirkleistung, der Imaginärteil die Blindleistung der Grundschwingung:
 \begin{equation}
   P=\frac{\UN\,U_{\mathrm{WR1}}\,\sin\Th}{X},
   \qquad
