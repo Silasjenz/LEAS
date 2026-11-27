@@ -2,7 +2,7 @@
 \section{Messungen und Auswertung}
 \label{sec:messungen}
 
-Die Oszillogramme tragen die Zeitstempel des Oszilloskops (13.11.2026 für Aufgabe~6.1.1, 20.11.2026 für alle weiteren). Die Spuren sind an ihrer Form erkennbar (sinusförmige Netzspannung, pulsförmige Wechselrichterspannung, Netzstrom in Magenta); die Kanalfarben unterscheiden sich zwischen den Messtagen.
+Die Oszillogramme tragen die Zeitstempel des Oszilloskops (13.11.2026 für Aufgabe~6.1.1, 27.11.2026 für die Nachmessung von «3.\ und 5.\ eliminiert» und der Grundfrequenztaktung in Abbildung~\ref{fig:621}, 20.11.2026 für alle weiteren). Die Spuren sind an ihrer Form erkennbar (sinusförmige Netzspannung, pulsförmige Wechselrichterspannung, Netzstrom in Magenta); die Kanalfarben unterscheiden sich zwischen den Messtagen.
 
 % ==========================================================================
 \subsection{Aufgabe 6.1.1: Stromform bei Grundfrequenztaktung}
@@ -140,22 +140,25 @@ Verglichen wurden die Muster «Trägerverfahren fein», «Trägerverfahren grob�
 
 \begin{table}[htbp]
   \centering
-  \caption{Einstellungen am Lastpunkt $P\approx\SI{1.15}{\kilo\watt}$, $Q_1\approx0$.}
+  \caption{Einstellungen am Lastpunkt $P\approx\SI{1.15}{\kilo\watt}$, $Q_1\approx0$. Die Werte für «3.\ und 5.\ eliminiert» und die Grundfrequenztaktung stammen aus der Nachmessung vom 27.11.2026.}
   \label{tab:621_einst}
   \begin{tabular}{@{}lrr@{}}
     \toprule
     Pulsmuster & $\Udc$ in V & $\Th$ in \si{\degree} \\
     \midrule
-    3.\ und 5.\ eliminiert & 282 & 29.8 \\
+    Grundfrequenztaktung & 284 & 28.0 \\
+    3.\ und 5.\ eliminiert & 342 & 29.8 \\
     Trägerverfahren fein & 358 & 29.8 \\
     Trägerverfahren grob & 363 & 29.8 \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-Alle Muster brauchen dieselbe Grundschwingung $U_{\mathrm{WR1}}$ (gleicher Lastpunkt, gleicher Winkel). Mit dem Winkel-Offset aus Abschnitt~\ref{sec:messung612} ist der wirksame Winkel $\Th_{\mathrm{eff}}\approx\SI{29.8}{\degree}-\SI{4.7}{\degree}=\SI{25.1}{\degree}$. Für $Q_1=0$ muss $U_{\mathrm{WR1}}\cos\Th_{\mathrm{eff}}=\UN$ gelten, also $U_{\mathrm{WR1}}\approx\SI{254}{\volt}$; nach \eqref{eq:PQ} folgt daraus $P\approx\SI{1.13}{\kilo\watt}$, was dem eingestellten Lastpunkt entspricht (berechnet). Damit ist $U_{\mathrm{WR1}}/\Udc$ beim Trägerverfahren «fein» $254/358\approx0.71$ und bei «grob» $254/363\approx0.70$, gegenüber 0.9 bei der Rechteckspannung. Das Trägerverfahren nutzt die Zwischenkreisspannung also schlechter aus, und es ist eine höhere Gleichspannung nötig. Bei «3.\ und 5.\ eliminiert» ergibt sich $254/282\approx0.90$. Das ist praktisch der Wert der Rechteckspannung; erwartet wäre ein etwas kleinerer Wert, weil die Kerben die Grundschwingung leicht verkleinern. Der Unterschied liegt aber innerhalb der Unsicherheit dieser Abschätzung, denn $U_{\mathrm{WR1}}$ wurde nicht gemessen, sondern über den abgeschätzten Winkel-Offset berechnet.
+Alle Muster brauchen dieselbe Grundschwingung $U_{\mathrm{WR1}}$ (gleicher Lastpunkt, gleicher Winkel). Mit dem Winkel-Offset aus Abschnitt~\ref{sec:messung612} ist der wirksame Winkel $\Th_{\mathrm{eff}}\approx\SI{29.8}{\degree}-\SI{4.7}{\degree}=\SI{25.1}{\degree}$. Für $Q_1=0$ muss $U_{\mathrm{WR1}}\cos\Th_{\mathrm{eff}}=\UN$ gelten, also $U_{\mathrm{WR1}}\approx\SI{254}{\volt}$; nach \eqref{eq:PQ} folgt daraus $P\approx\SI{1.13}{\kilo\watt}$, was dem eingestellten Lastpunkt entspricht (berechnet). Damit ist $U_{\mathrm{WR1}}/\Udc$ bei «3.\ und 5.\ eliminiert» $254/342\approx0.74$, beim Trägerverfahren «fein» $254/358\approx0.71$ und bei «grob» $254/363\approx0.70$, gegenüber 0.9 bei der Rechteckspannung. Die Kerben des Musters «3.\ und 5.\ eliminiert» verkleinern die Grundschwingung also auf rund \SI{83}{\percent} des Rechteckwerts, das Trägerverfahren auf knapp \SI{80}{\percent}. Je mehr ein Muster die Rechteckspannung zerteilt, desto schlechter nutzt es die Zwischenkreisspannung aus und desto höher muss $\Udc$ für denselben Lastpunkt sein.
 
-Für das Muster «3.\ und 5.\ eliminiert» liegt leider kein Oszillogramm vor; es wurde während der Messung nicht aufgenommen.
+Die Grundfrequenztaktung passt zu dieser Abschätzung: Mit $\Udc=\SI{284}{\volt}$ ist $U_{\mathrm{WR1}}=0.9\cdot\SI{284}{\volt}\approx\SI{256}{\volt}$, also nahezu der oben berechnete Wert. Mit dem wirksamen Winkel $\SI{28.0}{\degree}-\SI{4.7}{\degree}=\SI{23.3}{\degree}$ folgen nach \eqref{eq:PQ} $P\approx\SI{1.06}{\kilo\watt}$ und $Q_1\approx\SI{-50}{\VAr}$ (berechnet), also nahezu derselbe Lastpunkt.
+
+Die Oszillogramme von «3.\ und 5.\ eliminiert» und der Grundfrequenztaktung wurden am 20.11.2026 nicht aufgenommen und deshalb in einer Nachmessung am 27.11.2026 beim gleichen Lastpunkt nachgeholt. Dabei wurden auch die Einstellungen in Tabelle~\ref{tab:621_einst} notiert. Die Oberschwingungsanteile in Tabelle~\ref{tab:621_harm} stammen vom 20.11.2026.
 
 Die gemessenen Oberschwingungen stehen in Tabelle~\ref{tab:621_harm}. Die Spannungsoberschwingungen wurden in Stellung «WR», die Stromoberschwingungen in Stellung «Netz» abgelesen.
 
@@ -176,7 +179,7 @@ Die gemessenen Oberschwingungen stehen in Tabelle~\ref{tab:621_harm}. Die Spannu
 
 Die Prozentwerte des PM\,3000 beziehen sich auf die jeweilige Grundschwingung. Das zeigt die Messung in Tabelle~\ref{tab:611}: Dort ist $I_3=\SI{145}{\percent}$, was nur bei Bezug auf $I_1$ möglich ist, und der Wert stimmt mit der Theorie (\SI{142}{\percent}) überein.
 
-Die Oszillogramme der beiden Trägerverfahren und, als Referenz, der Grundfrequenztaktung zeigt Abbildung~\ref{fig:621}.
+Die Oszillogramme der drei Muster und, als Referenz, der Grundfrequenztaktung zeigt Abbildung~\ref{fig:621}.
 
 \begin{figure}[htbp]
   \centering
@@ -193,11 +196,16 @@ Die Oszillogramme der beiden Trägerverfahren und, als Referenz, der Grundfreque
 
   \medskip
   \begin{subfigure}[t]{0.48\linewidth}
-    \includegraphics[width=\linewidth]{20261120_093257.jpg}
-    \caption{Grundfrequenztaktung (Referenz, Einstellung nicht notiert; \SI{5}{\milli\second}/div, ohne Netzspannung)}
+    \includegraphics[width=\linewidth]{3_5_eliminiert.jpeg}
+    \caption{«3.\ und 5.\ eliminiert», $\Udc=\SI{342}{\volt}$, $\Th=\SI{29.8}{\degree}$ (27.11.2026)}
+    \label{fig:621_elim}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{Grundferquenztaktung.jpeg}
+    \caption{Grundfrequenztaktung (Referenz), $\Udc=\SI{284}{\volt}$, $\Th=\SI{28}{\degree}$ (27.11.2026, \SI{5}{\milli\second}/div)}
     \label{fig:621_rechteck}
   \end{subfigure}
-  \caption{Oszillogramme vom 20.11.2026: (a) und (b) am Lastpunkt $P\approx\SI{1.15}{\kilo\watt}$, $\Th=\SI{29.8}{\degree}$; (c) Grundfrequenztaktung als Referenz. Wechselrichterspannung (Cyan), Netzstrom (Magenta) und, in (a) und (b), Netzspannung (Gelb). Skalen: \SI{200}{\volt}/div, \SI{5}{\ampere}/div, \SI{2.5}{\milli\second}/div (Teilbild (c): \SI{5}{\milli\second}/div). Für «3.\ und 5.\ eliminiert» liegt kein Oszillogramm vor.}
+  \caption{Oszillogramme am Lastpunkt $P\approx\SI{1.15}{\kilo\watt}$, $Q_1\approx0$. (a) und (b) vom 20.11.2026: Wechselrichterspannung (Cyan), Netzspannung (Gelb), Netzstrom (Magenta). (c) und (d) aus der Nachmessung vom 27.11.2026: Wechselrichterspannung (Gelb), Netzspannung (Cyan), Netzstrom (Magenta). Skalen: \SI{200}{\volt}/div, \SI{5}{\ampere}/div, \SI{2.5}{\milli\second}/div (Teilbild (d): \SI{5}{\milli\second}/div).}
   \label{fig:621}
 \end{figure}
 
@@ -205,7 +213,7 @@ Die Oszillogramme der beiden Trägerverfahren und, als Referenz, der Grundfreque
 
 \paragraph{Messunsicherheit der Oberschwingungen.} Die Anzeige der Oberschwingungen am PM\,3000 schwankte bei den Pulsmustern stark; die abgelesenen Anteile streuten zwischen etwa \SI{2}{\percent} und \SI{50}{\percent}. Pro Grösse wurden deshalb mehrere Werte abgelesen und ungefähr gemittelt. Die Prozentwerte in Tabelle~\ref{tab:621_harm} sind daher nur grobe Richtwerte, und ein Vergleich der Muster auf wenige Prozentpunkte genau ist damit nicht möglich.
 
-\paragraph{Stromformen.} Auf den Oszillogrammen ist der Unterschied der Muster gut zu sehen. Bei Grundfrequenztaktung (Abbildung~\ref{fig:621_rechteck}) ist der Strom stark verzerrt und zeigt pro Halbperiode zwei Höcker. Beim Trägerverfahren «fein» besteht $\uWR$ aus einer sehr dichten Pulsfolge, und der Netzstrom verläuft nahezu glatt mit kleinem Schaltrippel. Bei «grob» gibt es deutlich weniger Pulse pro Netzperiode; der Strom ist sichtbar zackig und knickt bei jeder Schaltflanke. Für «3.\ und 5.\ eliminiert» liegt kein Oszillogramm vor, die Stromform dieses Musters kann deshalb nicht beurteilt werden. Qualitativ ist der Strom bei «fein» damit am glattesten, was zur Theorie passt; die abgelesenen Prozentwerte zeigen das wegen ihrer Streuung nicht.
+\paragraph{Stromformen.} Auf den Oszillogrammen ist der Unterschied der Muster gut zu sehen. Bei Grundfrequenztaktung (Abbildung~\ref{fig:621_rechteck}) ist der Strom stark verzerrt und hat bei jeder Schaltflanke eine Spitze. Beim Trägerverfahren «fein» besteht $\uWR$ aus einer sehr dichten Pulsfolge, und der Netzstrom verläuft nahezu glatt mit kleinem Schaltrippel. Bei «grob» gibt es deutlich weniger Pulse pro Netzperiode; der Strom ist sichtbar zackig und knickt bei jeder Schaltflanke. Beim Muster «3.\ und 5.\ eliminiert» (Abbildung~\ref{fig:621_elim}) ist $\uWR$ eine Rechteckspannung, in die an beiden Enden jeder Halbperiode zwei schmale Kerben geschnitten sind; die breite Mitte der Halbperiode bleibt erhalten. Der Strom ist dreieckförmig, mit einem Knick bei jeder Kerbe, und weniger spitz als bei Grundfrequenztaktung. Qualitativ ist der Strom bei «fein» damit am glattesten, was zur Theorie passt; die abgelesenen Prozentwerte zeigen das wegen ihrer Streuung nicht.
 
 % ==========================================================================
 \subsection{Aufgabe 6.2.2: Einstellen von \texorpdfstring{$P$ und $Q$}{P und Q} beim besten Muster}
@@ -281,7 +289,7 @@ Die Drehzahl wurde mit dem optischen Drehzahlmesser gemessen. Tabelle~\ref{tab:d
     Leerlauf & gemessen & 1500 \\
     Nennlast & Typenschild & 1430 \\
     Generatorbetrieb, $P\approx\SI{1.1}{\kilo\watt}$ & gemessen & 1505 \\
-    Motorbetrieb, $P\approx\SI{-1}{\kilo\watt}$ ($\Th=\SI{-15}{\degree}$, $\Udc=\SI{288}{\volt}$) & gemessen & 1488.8 \\
+    Motorbetrieb, $P\approx\SI{-1.1}{\kilo\watt}$ ($\Th=\SI{-15}{\degree}$, $\Udc=\SI{288}{\volt}$) & gemessen & 1488.8 \\
     \bottomrule
   \end{tabular}
 \end{table}
